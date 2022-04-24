@@ -7,8 +7,9 @@ const options = {
 };
 let ICAO = "";
 let airportInfo = "";
+
 async function searchAirportInfo(){
-  airportInfo = await search();
+  airportInfo = await searchAirport();
   console.log(airportInfo);
   const body = document.querySelector('body');
   for (let i = 0; i<airportInfo.items.length; i++){
@@ -26,19 +27,18 @@ function chooseAirport(selection){
   console.log(selection);
   ICAO = airportInfo.items[selection].icao;
   console.log(ICAO);
-  arrivalsDepartures();
+  printArrDep();
 }
 
-async function arrivalsDepartures(){
-  const contains = await search2();
+async function printArrDep(){
+  const contains = await getArrDep();
     console.log(contains);
     const departures = document.getElementById('Departures');
     const arrivals = document.getElementById('Arrivals');
     for (let i = 0; i < 5; i++) {
       let departureDate = contains.departures[i].movement.scheduledTimeLocal;
       let departureTime = new Date(departureDate);
-      departureTime = departureTime.getHours() + ":" +
-          departureTime.getMinutes()
+      departureTime = ((departureTime.getHours()<10?'0':'') + departureTime.getHours()) + ":" + ((departureTime.getMinutes()<10?'0':'') + departureTime.getMinutes())
       const newDeparture =
           `<article>
         <p>${departureTime} | ${contains.departures[i].movement.airport.name} </p>
@@ -55,8 +55,9 @@ async function arrivalsDepartures(){
       </article>`
       arrivals.innerHTML += newArrival;
     }
+    printDelays();
 }
-async function search() {
+async function searchAirport() {
   let result;
   const hakuteksti = document.getElementById("hakuteksti").value;
   await fetch('https://aerodatabox.p.rapidapi.com/airports/search/term?q=' + hakuteksti, options)
@@ -66,7 +67,7 @@ async function search() {
   return result;
 }
 
-async function search2(){
+async function getArrDep(){
   let result;
   let today = new Date();
   const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+today.getDate()+'T' + today.getHours() + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
@@ -76,4 +77,25 @@ async function search2(){
     result = response;
   }));
   return result;
+}
+
+async function getDelays(){
+  let result;
+  await fetch('https://aerodatabox.p.rapidapi.com/airports/icao/' + ICAO + '/delays', options)
+  .then(response => response.json()).then((response => {
+    result = response;
+  }));
+  return result;
+}
+
+async function printDelays(){
+  const contents = await getDelays();
+  console.log(contents);
+  const delays = document.getElementById('Delays');
+  const newArticle =
+      `<article>
+       <p>Delays in departures: ${contents.departuresDelayInformation.numTotal}</p>
+       <p>Delays in arrivals: ${contents.arrivalsDelayInformation.numTotal}</p>
+     </article>`
+  delays.innerHTML += newArticle;
 }
