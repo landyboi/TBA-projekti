@@ -99,3 +99,4 @@ async function printDelays(){
      </article>`
   delays.innerHTML += newArticle;
 }
+//
