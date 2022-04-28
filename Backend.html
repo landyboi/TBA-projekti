@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="code.js"></script>
+    <script src="search.js"></script>
+    <script src="Backend.js"></script>
+    <link rel="stylesheet" href="Backend.css">
+    <title>Backend</title>
+</head>
+<body>
+<label for="kenttähakuteksti"></label> Tallenna lentokenttä: <input id="kenttähakuteksti" type="text">
+<button onclick="saveAirport()">Hae!</button>
+<br>
+<br>
+<label for="lentohakuteksti"></label> Tallenna lento: <input id="lentohakuteksti" type="text">
+<button onclick="saveFlight()">Hae!</button>
+<article id="Info">
+</article>
+<article id="Departures" class="elements">
+  <h1> Departures: </h1>
+</article>
+
+<article id="Arrivals" class="elements">
+  <h1> Arrivals: </h1>
+</article>
+
+<article id="Delays" class="elements">
+  <h1> Delays today: </h1>
+</article>
+</body>
+</html>

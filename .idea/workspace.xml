@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Toinen versio.">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="New branch">
+      <change afterPath="$PROJECT_DIR$/Backend.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -13,7 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -48,6 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web Tehtävät 8" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,7 +67,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8c919850-87ca-47f8-a9e0-3e06f7792193" name="Changes" comment="" />
+      <changelist id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="New branch" />
       <created>1650528400426</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -67,6 +75,10 @@
       <workItem from="1650528401780" duration="4746000" />
       <workItem from="1650829999620" duration="615000" />
       <workItem from="1650912195996" duration="358000" />
+      <workItem from="1651127273428" duration="2664000" />
+      <workItem from="1651136551090" duration="3957000" />
+      <workItem from="1651152404752" duration="9867000" />
+      <workItem from="1651171123817" duration="3087000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -82,7 +94,13 @@
       <option name="project" value="LOCAL" />
       <updated>1650912249709</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="New branch">
+      <created>1650998016331</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1650998016331</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +120,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Firebase stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Firebase stuff" />
+    <MESSAGE value="New branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="New branch" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
