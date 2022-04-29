@@ -3,26 +3,25 @@ let airportInfo = "";
 
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
+  document.body.appendChild(document.createElement("div"));
+  const div = document.querySelector('div');
   for (let i = 0; i<airportInfo.items.length; i++){
     const button = document.createElement("button");
-    document.body.appendChild(document.createElement("br"));
-    document.body.appendChild(document.createElement("br"));
+    div.appendChild(document.createElement("br"));
+    div.appendChild(document.createElement("br"));
     button.innerHTML = airportInfo.items[i].name;
     button.onclick = function() {chooseAirport(i);}
     button.className = "AirportButtons";
-    document.body.appendChild(button);
+    div.appendChild(button);
   }
 }
 
-function chooseAirport(selection){
-  const buttons = document.getElementsByClassName("AirportButtons");
-  for (let i = 0; i<buttons.length; i++){
-    buttons[i].remove();
-  }
+function chooseAirport(selection) {
+  const div = document.querySelector('div');
+  div.innerHTML = "";
   ICAO = airportInfo.items[selection].icao;
   printArrDep();
 }
-
 async function printArrDep(){
   const contains = await getArrDep();
   console.log(contains);

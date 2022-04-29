@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="New branch">
-      <change afterPath="$PROJECT_DIR$/Backend.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Tons of new Features.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +74,10 @@
       <workItem from="1651136551090" duration="3957000" />
       <workItem from="1651152404752" duration="9867000" />
       <workItem from="1651171123817" duration="3087000" />
+      <workItem from="1651174244537" duration="164000" />
+      <workItem from="1651215025549" duration="285000" />
+      <workItem from="1651215469646" duration="373000" />
+      <workItem from="1651238856413" duration="948000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -100,7 +99,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1650998016331</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Tons of new Features.">
+      <created>1651174389727</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1651174389727</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +126,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Firebase stuff" />
     <MESSAGE value="New branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="New branch" />
+    <MESSAGE value="Tons of new Features." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tons of new Features." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
