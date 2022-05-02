@@ -1,4 +1,3 @@
-
 function saveFlight() {
   const lentohakuteksti = document.getElementById("lentohakuteksti").value;
   let savedFlights = [lentohakuteksti];

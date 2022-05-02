@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Tons of new Features.">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Buttons from airport selection now gets removed when airport is chosen.">
+      <change afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,7 +81,9 @@
       <workItem from="1651174244537" duration="164000" />
       <workItem from="1651215025549" duration="285000" />
       <workItem from="1651215469646" duration="373000" />
-      <workItem from="1651238856413" duration="948000" />
+      <workItem from="1651238856413" duration="1234000" />
+      <workItem from="1651240155475" duration="405000" />
+      <workItem from="1651504565981" duration="2470000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -105,7 +111,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1651174389727</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Buttons from airport selection now gets removed when airport is chosen.">
+      <created>1651240044492</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1651240044492</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +139,8 @@
     <MESSAGE value="Firebase stuff" />
     <MESSAGE value="New branch" />
     <MESSAGE value="Tons of new Features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tons of new Features." />
+    <MESSAGE value="Buttons from airport selection now gets removed when airport is chosen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Buttons from airport selection now gets removed when airport is chosen." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

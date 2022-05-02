@@ -1,6 +1,8 @@
 let ICAO = "";
 let airportInfo = "";
 
+getLocation();
+
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
   document.body.appendChild(document.createElement("div"));
