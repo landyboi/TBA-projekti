@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Buttons from airport selection now gets removed when airport is chosen.">
-      <change afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added API, that gets your geolocation via IP address.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
     </list>
@@ -84,6 +84,8 @@
       <workItem from="1651238856413" duration="1234000" />
       <workItem from="1651240155475" duration="405000" />
       <workItem from="1651504565981" duration="2470000" />
+      <workItem from="1651507492149" duration="2062000" />
+      <workItem from="1651509683280" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -117,7 +119,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1651240044492</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Added API, that gets your geolocation via IP address.">
+      <created>1651507813150</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1651507813150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +148,8 @@
     <MESSAGE value="New branch" />
     <MESSAGE value="Tons of new Features." />
     <MESSAGE value="Buttons from airport selection now gets removed when airport is chosen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Buttons from airport selection now gets removed when airport is chosen." />
+    <MESSAGE value="Added API, that gets your geolocation via IP address." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added API, that gets your geolocation via IP address." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

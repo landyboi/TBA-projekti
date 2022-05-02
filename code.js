@@ -1,10 +1,11 @@
 let ICAO = "";
 let airportInfo = "";
-
-getLocation();
-
+let airportName = "";
+let printDeparture = true;
+let printArrival = true;
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
+  console.log(airportInfo);
   document.body.appendChild(document.createElement("div"));
   const div = document.querySelector('div');
   for (let i = 0; i<airportInfo.items.length; i++){
@@ -22,6 +23,7 @@ function chooseAirport(selection) {
   const div = document.querySelector('div');
   div.innerHTML = "";
   ICAO = airportInfo.items[selection].icao;
+  airportName = airportInfo.items[selection].name;
   printArrDep();
 }
 async function printArrDep(){
@@ -30,22 +32,55 @@ async function printArrDep(){
   const departures = document.getElementById('Departures');
   const arrivals = document.getElementById('Arrivals');
   resetText(1);
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
+    if (contains.departures[i] === undefined){
+      i++;
+      break;
+    }
     const departureTime = getTime(contains.departures[i].movement.scheduledTimeLocal);
-    const arrivalTime = getTime(contains.arrivals[i].movement.scheduledTimeLocal);
-    const departureInfo1 = document.createElement("p");
-    const departureInfo2 = document.createElement("p");
-    departureInfo1.innerHTML = departureTime + " | " + contains.departures[i].movement.airport.name;
-    departureInfo2.innerHTML = "Airline: " + contains.departures[i].airline.name + "| Status: " + contains.departures[i].status;
-    departures.appendChild(departureInfo1);
-    departures.appendChild(departureInfo2);
-    const arrivalInfo1 = document.createElement("p");
-    const arrivalInfo2 = document.createElement("p");
-    arrivalInfo1.innerHTML = arrivalTime + " | " + contains.arrivals[i].movement.airport.name;
-    arrivalInfo2.innerHTML = "Airline: " + contains.arrivals[i].airline.name + " | Status: " + contains.arrivals[i].status;
-    arrivals.appendChild(arrivalInfo1);
-    arrivals.appendChild(arrivalInfo2);
+    if (contains.departures[i].codeshareStatus != "IsCodeshared"){
+      const departureInfo1 = document.createElement("p");
+      departureInfo1.id = "Departures ID: " + i;
+      const departureInfo2 = document.createElement("p");
+      departureInfo1.innerHTML = departureTime + " | " +
+          contains.departures[i].movement.airport.name;
+      departureInfo2.innerHTML = "Airline: " +
+          contains.departures[i].airline.name + "| Status: " +
+          contains.departures[i].status;
+      departures.appendChild(departureInfo1);
+      departures.appendChild(departureInfo2);
+      let text = document.getElementById("Departures ID: " + i);
+      text.onclick = () => {
+        printFlight(contains.departures[i].number);
+      }
+    }
   }
+  for (let i = 0; i < 8; i++){
+    if (contains.arrivals[i] === undefined){
+      i++;
+      break;
+    }
+    const arrivalTime = getTime(contains.arrivals[i].movement.scheduledTimeLocal);
+    if (contains.arrivals[i].codeshareStatus != "IsCodeshared") {
+      const arrivalInfo1 = document.createElement("p");
+      arrivalInfo1.id = "Arrivals ID: " + i;
+      const arrivalInfo2 = document.createElement("p");
+      arrivalInfo1.innerHTML = arrivalTime + " | " +
+          contains.arrivals[i].movement.airport.name;
+      arrivalInfo2.innerHTML = "Airline: " + contains.arrivals[i].airline.name +
+          " | Status: " + contains.arrivals[i].status;
+      arrivals.appendChild(arrivalInfo1);
+      arrivals.appendChild(arrivalInfo2);
+      let text = document.getElementById("Arrivals ID: " + i);
+      text.onclick = () => {
+        printFlight(contains.arrivals[i].number);
+      }
+    }
+  }
+  const location = document.getElementById('currentAirport');
+  const locationInfo = document.createElement('h1');
+  locationInfo.innerHTML = "Current airport: " + airportName;
+  location.appendChild(locationInfo);
   printDelays();
 }
 
@@ -101,6 +136,8 @@ function resetText(selection){
     const departures = document.getElementById('Departures');
     const arrivals = document.getElementById('Arrivals');
     const delays = document.getElementById('Delays');
+    const location = document.getElementById('currentAirport');
+    location.innerHTML = "";
     departures.innerHTML = "";
     arrivals.innerHTML = "";
     delays.innerHTML = "";

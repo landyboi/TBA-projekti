@@ -7,7 +7,7 @@ const locationOptions = {
 };
 
 async function getLocation() {
-  const contains = await fetch('https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/', locationOptions)
+  const contains = await fetch('https://ipwho.is/', locationOptions)
   const result = await contains.json();
   return result;
 }
@@ -19,5 +19,6 @@ async function printLocation(){
   console.log(city);
   airportInfo = await getAirport(city);
   ICAO = airportInfo.items[0].icao;
+  airportName = airportInfo.items[0].name;
   printArrDep();
 }

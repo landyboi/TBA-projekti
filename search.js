@@ -29,7 +29,7 @@ async function getFlight(number) {
   } else{
     url = "https://aerodatabox.p.rapidapi.com/flights/number/" + number + "/";
   }
-  const contains = await fetch(url + today.getFullYear() + '-' + ((today.getMonth() < 10 ? '0' : '') + (today.getMonth() + 1)) + '-' + today.getDate(), options);
+  const contains = await fetch(url + today.getFullYear() + '-' + ((today.getMonth() < 10 ? '0' : '') + (today.getMonth() + 1)) + '-' + ((today.getDate()<10?'0':'') + today.getDate()), options);
   const result = await contains.json();
   return result;
 }
