@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c919850-87ca-47f8-a9e0-3e06f7792193" name="Changes" comment="" />
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added new &quot;Airlabs&quot; API. Tons of new features.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,13 +14,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="firebase" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web Tehtävät 8" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,7 +62,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8c919850-87ca-47f8-a9e0-3e06f7792193" name="Changes" comment="" />
+      <changelist id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="New branch" />
       <created>1650528400426</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -64,6 +70,22 @@
       <workItem from="1650528401780" duration="4746000" />
       <workItem from="1650829999620" duration="615000" />
       <workItem from="1650912195996" duration="358000" />
+      <workItem from="1651127273428" duration="2664000" />
+      <workItem from="1651136551090" duration="3957000" />
+      <workItem from="1651152404752" duration="9867000" />
+      <workItem from="1651171123817" duration="3087000" />
+      <workItem from="1651174244537" duration="164000" />
+      <workItem from="1651215025549" duration="285000" />
+      <workItem from="1651215469646" duration="373000" />
+      <workItem from="1651238856413" duration="1234000" />
+      <workItem from="1651240155475" duration="405000" />
+      <workItem from="1651504565981" duration="2470000" />
+      <workItem from="1651507492149" duration="2062000" />
+      <workItem from="1651509683280" duration="6509000" />
+      <workItem from="1651561476580" duration="482000" />
+      <workItem from="1651562664940" duration="2208000" />
+      <workItem from="1651572280900" duration="3023000" />
+      <workItem from="1651586845163" duration="9975000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -79,7 +101,43 @@
       <option name="project" value="LOCAL" />
       <updated>1650912249709</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="New branch">
+      <created>1650998016331</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1650998016331</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Tons of new Features.">
+      <created>1651174389727</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1651174389727</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Buttons from airport selection now gets removed when airport is chosen.">
+      <created>1651240044492</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1651240044492</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Added API, that gets your geolocation via IP address.">
+      <created>1651507813150</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1651507813150</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you.">
+      <created>1651516148068</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1651516148068</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Added new &quot;Airlabs&quot; API. Tons of new features.">
+      <created>1651595877420</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1651595877420</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +157,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Firebase stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Firebase stuff" />
+    <MESSAGE value="New branch" />
+    <MESSAGE value="Tons of new Features." />
+    <MESSAGE value="Buttons from airport selection now gets removed when airport is chosen." />
+    <MESSAGE value="Added API, that gets your geolocation via IP address." />
+    <MESSAGE value="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you." />
+    <MESSAGE value="Added new &quot;Airlabs&quot; API. Tons of new features." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new &quot;Airlabs&quot; API. Tons of new features." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

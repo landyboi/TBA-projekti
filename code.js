@@ -1,102 +1,157 @@
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com',
-    'X-RapidAPI-Key': '74f0927946mshe7281fe540d5c51p1a2aa5jsnd6cc563ec47c'
-  }
-};
 let ICAO = "";
 let airportInfo = "";
+let airportName = "";
 
-async function searchAirportInfo(){
-  airportInfo = await searchAirport();
+async function searchAirportInfo(city){
+  airportInfo = await getAirport(city);
   console.log(airportInfo);
-  const body = document.querySelector('body');
+  document.body.appendChild(document.createElement("div"));
+  const div = document.querySelector('div');
   for (let i = 0; i<airportInfo.items.length; i++){
-    const buttons =
-        `<body>
-        <br>
-        <br>
-        <button onclick="chooseAirport(${[i]})">${airportInfo.items[i].name}</button>
-        </body>`
-    body.innerHTML += buttons;
+    const button = document.createElement("button");
+    div.appendChild(document.createElement("br"));
+    div.appendChild(document.createElement("br"));
+    button.innerHTML = airportInfo.items[i].name;
+    button.onclick = function() {chooseAirport(i);}
+    button.className = "AirportButtons";
+    div.appendChild(button);
   }
 }
 
-function chooseAirport(selection){
-  console.log(selection);
+function chooseAirport(selection) {
+  const div = document.querySelector('div');
+  div.innerHTML = "";
   ICAO = airportInfo.items[selection].icao;
-  console.log(ICAO);
+  airportName = airportInfo.items[selection].name;
   printArrDep();
 }
-
 async function printArrDep(){
   const contains = await getArrDep();
-    console.log(contains);
-    const departures = document.getElementById('Departures');
-    const arrivals = document.getElementById('Arrivals');
-    for (let i = 0; i < 5; i++) {
-      let departureDate = contains.departures[i].movement.scheduledTimeLocal;
-      let departureTime = new Date(departureDate);
-      departureTime = ((departureTime.getHours()<10?'0':'') + departureTime.getHours()) + ":" + ((departureTime.getMinutes()<10?'0':'') + departureTime.getMinutes())
-      const newDeparture =
-          `<article>
-        <p>${departureTime} | ${contains.departures[i].movement.airport.name} </p>
-        <p>Airline: ${contains.departures[i].airline.name} | Status: ${contains.departures[i].status} </p>
-      </article>`
-      departures.innerHTML += newDeparture;
-      let arrivalDate = contains.arrivals[i].movement.scheduledTimeLocal;
-      let arrivalTime = new Date(arrivalDate);
-      arrivalTime = arrivalTime.getHours() + ":" + arrivalTime.getMinutes()
-      const newArrival =
-          `<article>
-        <p>${arrivalTime} | ${contains.arrivals[i].movement.airport.name} </p>
-        <p>Airline: ${contains.arrivals[i].airline.name} | Status: ${contains.arrivals[i].status} </p>
-      </article>`
-      arrivals.innerHTML += newArrival;
+  console.log(contains);
+  const departures = document.getElementById('Departures');
+  const arrivals = document.getElementById('Arrivals');
+  resetText(1);
+  for (let i = 0; i < 5; i++) {
+    if (contains.departures[i] === undefined) {
+      i++;
+      break;
     }
-    printDelays();
-}
-async function searchAirport() {
-  let result;
-  const hakuteksti = document.getElementById("hakuteksti").value;
-  await fetch('https://aerodatabox.p.rapidapi.com/airports/search/term?q=' + hakuteksti, options)
-  .then(response => response.json()).then((response => {
-    result = response;
-  }));
-  return result;
+      const departureTime = getTime(
+          contains.departures[i].movement.scheduledTimeLocal);
+      const departureInfo1 = document.createElement("p");
+      departureInfo1.id = "Departures ID: " + i;
+      const departureInfo2 = document.createElement("p");
+      departureInfo1.innerHTML = departureTime + " | " +
+          contains.departures[i].movement.airport.name;
+      departureInfo2.innerHTML = "Airline: " +
+          contains.departures[i].airline.name + "| Status: " +
+          contains.departures[i].status;
+      departures.appendChild(departureInfo1);
+      departures.appendChild(departureInfo2);
+      let text = document.getElementById("Departures ID: " + i);
+      text.onclick = () => {
+        printFlight(contains.departures[i].number);
+      }
+  }
+  for (let i = 0; i < 5; i++) {
+    if (contains.arrivals[i] === undefined){
+      i++;
+      break;
+    }
+    const arrivalTime = getTime(contains.arrivals[i].movement.scheduledTimeLocal);
+      const arrivalInfo1 = document.createElement("p");
+      arrivalInfo1.id = "Arrivals ID: " + i;
+      const arrivalInfo2 = document.createElement("p");
+      arrivalInfo1.innerHTML = arrivalTime + " | " +
+          contains.arrivals[i].movement.airport.name;
+      arrivalInfo2.innerHTML = "Airline: " + contains.arrivals[i].airline.name +
+          " | Status: " + contains.arrivals[i].status;
+      arrivals.appendChild(arrivalInfo1);
+      arrivals.appendChild(arrivalInfo2);
+      let text = document.getElementById("Arrivals ID: " + i);
+      text.onclick = () => {
+        printFlight(contains.arrivals[i].number);
+      }
+  }
+  const location = document.getElementById('currentAirport');
+  const locationInfo = document.createElement('h1');
+  locationInfo.innerHTML = "Current airport: " + airportName;
+  location.appendChild(locationInfo);
+  printDelays();
 }
 
-async function getArrDep(){
-  let result;
-  let today = new Date();
-  const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+today.getDate()+'T' + today.getHours() + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
-  const endtime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+today.getDate()+'T' + (today.getHours()+1) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
-  await fetch('https://aerodatabox.p.rapidapi.com/flights/airports/icao/' + ICAO + '/' + starttime + '/' + endtime, options)
-  .then(response => response.json()).then((response => {
-    result = response;
-  }));
-  return result;
-}
-
-async function getDelays(){
-  let result;
-  await fetch('https://aerodatabox.p.rapidapi.com/airports/icao/' + ICAO + '/delays', options)
-  .then(response => response.json()).then((response => {
-    result = response;
-  }));
-  return result;
+async function printFlight(number) {
+  const contents = await getFlight(number);
+  console.log(contents);
+  const article = document.getElementById('Info');
+  let departureTime = getTime(contents[0].departure.scheduledTimeLocal);
+  let arrivalTime = getTime(contents[0].arrival.scheduledTimeLocal);
+  resetText(2);
+  const info1 = document.createElement('h1');
+  const info2 = document.createElement('p');
+  const info3 = document.createElement('p');
+  const info4 = document.createElement('p');
+  const info5 = document.createElement('p');
+  info1.innerHTML = "Status: " + contents[0].status;
+  info2.innerHTML = "Departure: " + departureTime + " | " + contents[0].departure.airport.name;
+  info3.innerHTML = "Arrival: " +  arrivalTime + " | " + contents[0].arrival.airport.name;
+  info4.innerHTML = "Operator: " + contents[0].airline.name;
+  info5.innerHTML = "Baggage belt: " + contents[0].arrival.baggageBelt;
+  article.appendChild(info1);
+  article.appendChild(info2);
+  article.appendChild(info3);
+  article.appendChild(info4);
+  article.appendChild(info5);
+  const reg = contents[0].aircraft.reg;
+  const url = await getPicture(reg);
+  if (url != undefined){
+    let image = document.createElement('img');
+    image.src = url;
+    article.appendChild(image);
+  }
 }
 
 async function printDelays(){
   const contents = await getDelays();
-  console.log(contents);
   const delays = document.getElementById('Delays');
-  const newArticle =
-      `<article>
-       <p>Delays in departures: ${contents.departuresDelayInformation.numTotal}</p>
-       <p>Delays in arrivals: ${contents.arrivalsDelayInformation.numTotal}</p>
-     </article>`
-  delays.innerHTML += newArticle;
+  const info1 = document.createElement('p');
+  const info2 = document.createElement('p');
+  info1.innerHTML = "Delays in departures: " + (contents.departuresDelayInformation.delayIndex).toFixed(2);
+  info2.innerHTML = "Delays in arrivals: " + (contents.arrivalsDelayInformation.delayIndex).toFixed(2);
+  delays.appendChild(info1);
+  delays.appendChild(info2);
 }
-//
+
+function getTime(date){
+  if (date != null) {
+    let time = new Date(date)
+    time = ((time.getHours() < 10 ? '0' : '') + time.getHours()) + ":" +
+        ((time.getMinutes() < 10 ? '0' : '') + time.getMinutes());
+    return time;
+  }
+}
+
+function resetText(selection){
+  if (selection == 1) {
+    const departures = document.getElementById('Departures');
+    const arrivals = document.getElementById('Arrivals');
+    const delays = document.getElementById('Delays');
+    const location = document.getElementById('currentAirport');
+    location.innerHTML = "";
+    departures.innerHTML = "";
+    arrivals.innerHTML = "";
+    delays.innerHTML = "";
+    const text1 = document.createElement('h1');
+    const text2 = document.createElement('h1');
+    const text3 = document.createElement('h1');
+    text1.innerHTML = "Departures:";
+    text2.innerHTML = "Arrivals:";
+    text3.innerHTML = "Delays today:";
+    departures.appendChild(text1);
+    arrivals.appendChild(text2);
+    delays.appendChild(text3);
+  }else if (selection == 2){
+    const article = document.getElementById('Info');
+    article.innerHTML = "";
+  }
+}

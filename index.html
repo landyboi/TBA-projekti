@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <script src="code.js"></script>
+    <script src="search.js"></script>
+    <script src="getLocation.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
     <title>Projekti</title>
 </head>
 <body>
-
+<article id="currentAirport">
+</article>
 <article id="Departures">
     <h1> Departures: </h1>
 </article>
@@ -19,8 +23,15 @@
     <h1> Delays today: </h1>
 </article>
 
+<article id="Info">
+</article>
 
-<label for="hakuteksti"></label><input id="hakuteksti" type="text">
+<label for="kenttähakuteksti"></label> Hae lentokenttää: <input id="kenttähakuteksti" type="text">
 <button onclick="searchAirportInfo()">Hae!</button>
+<br>
+<br>
+<label for="lentohakuteksti"></label>Hae lentoa: <input id="lentohakuteksti" type="text">
+<button onclick="printFlight()">Hae!</button>
+<button onclick="getPositions()">get location</button>
 </body>
 </html>
