@@ -63,7 +63,7 @@ async function getDelays(){
 }
 
 async function getPositions(){
-  const contains = await fetch('https://airlabs.co/api/v9/flights?dep_icao=EFHK&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const contains = await fetch('https://airlabs.co/api/v9/flights?flight_icao=FIN456&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
   const result = await contains.json();
   console.log(result);
 }

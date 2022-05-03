@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you.">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added new &quot;Airlabs&quot; API. Tons of new features.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1651561476580" duration="482000" />
       <workItem from="1651562664940" duration="2208000" />
       <workItem from="1651572280900" duration="3023000" />
-      <workItem from="1651586845163" duration="7554000" />
+      <workItem from="1651586845163" duration="9975000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -134,7 +131,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1651516148068</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Added new &quot;Airlabs&quot; API. Tons of new features.">
+      <created>1651595877420</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1651595877420</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +162,8 @@
     <MESSAGE value="Buttons from airport selection now gets removed when airport is chosen." />
     <MESSAGE value="Added API, that gets your geolocation via IP address." />
     <MESSAGE value="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you." />
+    <MESSAGE value="Added new &quot;Airlabs&quot; API. Tons of new features." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new &quot;Airlabs&quot; API. Tons of new features." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
