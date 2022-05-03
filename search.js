@@ -36,16 +36,22 @@ async function getFlight(number) {
 
 
 async function getPicture(registeration){
-  const contains = await fetch('https://aerodatabox.p.rapidapi.com/aircrafts/reg/' + registeration + '/image/beta', options)
-  let result = await contains.json();
-  result = result.url;
-  return result;
+  try {
+    const contains = await fetch(
+        'https://aerodatabox.p.rapidapi.com/aircrafts/reg/' + registeration +
+        '/image/beta', options)
+    let result = await contains.json();
+    result = result.url;
+    return result;
+  } catch (error){
+    return undefined;
+  }
 }
 
 async function getArrDep(){
   const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' + ((today.getHours()<10?'0':'') + today.getHours()) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
   const endtime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' +  + (today.getHours()+1) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
-  const contains = await fetch('https://aerodatabox.p.rapidapi.com/flights/airports/icao/' + ICAO + '/' + starttime + '/' + endtime, options)
+  const contains = await fetch('https://aerodatabox.p.rapidapi.com/flights/airports/icao/' + ICAO + '/' + starttime + '/' + endtime + '?withCodeshared=false', options)
   const result = await contains.json();
   return result;
 }
@@ -54,4 +60,10 @@ async function getDelays(){
   const contains = await fetch('https://aerodatabox.p.rapidapi.com/airports/icao/' + ICAO + '/delays', options);
   const result = await contains.json();
   return result;
+}
+
+async function getPositions(){
+  const contains = await fetch('https://airlabs.co/api/v9/flights?dep_icao=EFHK&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const result = await contains.json();
+  console.log(result);
 }

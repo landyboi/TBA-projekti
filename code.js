@@ -1,8 +1,7 @@
 let ICAO = "";
 let airportInfo = "";
 let airportName = "";
-let printDeparture = true;
-let printArrival = true;
+
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
   console.log(airportInfo);
@@ -32,13 +31,13 @@ async function printArrDep(){
   const departures = document.getElementById('Departures');
   const arrivals = document.getElementById('Arrivals');
   resetText(1);
-  for (let i = 0; i < 8; i++) {
-    if (contains.departures[i] === undefined){
+  for (let i = 0; i < 5; i++) {
+    if (contains.departures[i] === undefined) {
       i++;
       break;
     }
-    const departureTime = getTime(contains.departures[i].movement.scheduledTimeLocal);
-    if (contains.departures[i].codeshareStatus != "IsCodeshared"){
+      const departureTime = getTime(
+          contains.departures[i].movement.scheduledTimeLocal);
       const departureInfo1 = document.createElement("p");
       departureInfo1.id = "Departures ID: " + i;
       const departureInfo2 = document.createElement("p");
@@ -53,15 +52,13 @@ async function printArrDep(){
       text.onclick = () => {
         printFlight(contains.departures[i].number);
       }
-    }
   }
-  for (let i = 0; i < 8; i++){
+  for (let i = 0; i < 5; i++) {
     if (contains.arrivals[i] === undefined){
       i++;
       break;
     }
     const arrivalTime = getTime(contains.arrivals[i].movement.scheduledTimeLocal);
-    if (contains.arrivals[i].codeshareStatus != "IsCodeshared") {
       const arrivalInfo1 = document.createElement("p");
       arrivalInfo1.id = "Arrivals ID: " + i;
       const arrivalInfo2 = document.createElement("p");
@@ -75,7 +72,6 @@ async function printArrDep(){
       text.onclick = () => {
         printFlight(contains.arrivals[i].number);
       }
-    }
   }
   const location = document.getElementById('currentAirport');
   const locationInfo = document.createElement('h1');
@@ -86,9 +82,10 @@ async function printArrDep(){
 
 async function printFlight(number) {
   const contents = await getFlight(number);
+  console.log(contents);
   const article = document.getElementById('Info');
-  const departureTime = getTime(contents[0].departure.scheduledTimeUtc);
-  const arrivalTime = getTime(contents[0].arrival.scheduledTimeUtc);
+  let departureTime = getTime(contents[0].departure.scheduledTimeLocal);
+  let arrivalTime = getTime(contents[0].arrival.scheduledTimeLocal);
   resetText(2);
   const info1 = document.createElement('h1');
   const info2 = document.createElement('p');
@@ -126,9 +123,12 @@ async function printDelays(){
 }
 
 function getTime(date){
-  let time = new Date(date)
-  time = ((time.getHours()<10?'0':'') + time.getHours()) + ":" + ((time.getMinutes()<10?'0':'') + time.getMinutes());
-  return time;
+  if (date != null) {
+    let time = new Date(date)
+    time = ((time.getHours() < 10 ? '0' : '') + time.getHours()) + ":" +
+        ((time.getMinutes() < 10 ? '0' : '') + time.getMinutes());
+    return time;
+  }
 }
 
 function resetText(selection){
