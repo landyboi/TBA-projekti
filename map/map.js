@@ -10,8 +10,9 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TT
 }).addTo(map);
 
 
-addToMap(51.1, 0.11);
+addToMap(51.1, 0.11, "finnair", "50 knots", "AY643");
 
-function addToMap (lat, lon) {
-  let marker = L.marker([lat, lon]).addTo(map)
+function addToMap (lat, lon, name, speed, flightNumber) {
+  let marker = L.marker([lat, lon]).addTo(map);
+      marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + name + '</br>' + '<strong>' + "Speed: " + '</strong>' + speed);
 }

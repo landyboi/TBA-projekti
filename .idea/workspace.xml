@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/images/marker-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet-src.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet-src.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet-src.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/leaflet.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
