@@ -5,7 +5,6 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TT
   tileSize: 512,
   zoomOffset: -1,
   minZoom: 1,
-  attribution: "<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
   crossOrigin: true
 }).addTo(map);
 

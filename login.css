@@ -9,8 +9,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     cursor: pointer;
     width:auto;
 }
-#kenttähakuteksti, #lentohakuteksti {
-    width: auto;
+#email, #username, #password{
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
