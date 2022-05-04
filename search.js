@@ -63,8 +63,8 @@ async function getDelays(){
 }
 
 async function getPositions(ICAO){
-  const departures = await fetch('https://airlabs.co/api/v9/flights?dep_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
-  const arrivals = await fetch('https://airlabs.co/api/v9/flights?arr_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const departures = await fetch('https://airlabs.co/api/v9/flights?dep_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt,flight_icao&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const arrivals = await fetch('https://airlabs.co/api/v9/flights?arr_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt,flight_icao&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
   const departuresPositions = await departures.json();
   const arrivalsPositions = await arrivals.json();
   console.log(departuresPositions);
