@@ -101,7 +101,7 @@ async function printFlight(number) {
     info4.innerHTML = "Operator: " + contents[0].airline.name
   } else {
     info4.innerHTML = "Operator: " + contents[0].airline.name +
-        " | Lentokone: " + contents[0].aircraft.model;
+        " | Aircraft: " + contents[0].aircraft.model;
   }
   if (contents[0].arrival.baggageBelt === undefined) {
     info5.innerHTML = "Baggage belt: Unknown";
