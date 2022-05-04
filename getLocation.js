@@ -21,4 +21,5 @@ async function printLocation(){
   ICAO = airportInfo.items[0].icao;
   airportName = airportInfo.items[0].name;
   printArrDep();
+  getPositions(ICAO);
 }

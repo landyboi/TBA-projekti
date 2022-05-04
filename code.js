@@ -24,6 +24,7 @@ function chooseAirport(selection) {
   ICAO = airportInfo.items[selection].icao;
   airportName = airportInfo.items[selection].name;
   printArrDep();
+  getPositions(ICAO);
 }
 async function printArrDep(){
   const contains = await getArrDep();
@@ -104,7 +105,7 @@ async function printFlight(number) {
   article.appendChild(info5);
   const reg = contents[0].aircraft.reg;
   const url = await getPicture(reg);
-  if (url != undefined){
+  if (url !== undefined){
     let image = document.createElement('img');
     image.src = url;
     article.appendChild(image);
@@ -132,7 +133,7 @@ function getTime(date){
 }
 
 function resetText(selection){
-  if (selection == 1) {
+  if (selection === 1) {
     const departures = document.getElementById('Departures');
     const arrivals = document.getElementById('Arrivals');
     const delays = document.getElementById('Delays');
@@ -150,7 +151,7 @@ function resetText(selection){
     departures.appendChild(text1);
     arrivals.appendChild(text2);
     delays.appendChild(text3);
-  }else if (selection == 2){
+  }else if (selection === 2){
     const article = document.getElementById('Info');
     article.innerHTML = "";
   }

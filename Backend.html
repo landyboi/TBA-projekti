@@ -5,28 +5,33 @@
     <script src="code.js"></script>
     <script src="search.js"></script>
     <script src="backend.js"></script>
+    <script src="getLocation.js"></script>
     <link rel="stylesheet" href="css/backend.css">
     <title>Backend</title>
 </head>
 <body>
+<section>
 <label for="kenttähakuteksti"></label> Tallenna lentokenttä: <input id="kenttähakuteksti" type="text">
 <button onclick="saveAirport()">Hae!</button>
 <br>
 <br>
 <label for="lentohakuteksti"></label> Tallenna lento: <input id="lentohakuteksti" type="text">
 <button onclick="saveFlight()">Hae!</button>
-<article id="Info">
-</article>
-<article id="Departures" class="elements">
+</section>
+<div id="Info">
+</div>
+<div id="currentAirport" class="elements">
+</div>
+<div id="Departures" class="elements">
   <h1> Departures: </h1>
-</article>
+</div>
 
-<article id="Arrivals" class="elements">
+<div id="Arrivals" class="elements">
   <h1> Arrivals: </h1>
-</article>
+</div>
 
-<article id="Delays" class="elements">
+<div id="Delays" class="elements">
   <h1> Delays today: </h1>
-</article>
+</div>
 </body>
 </html>

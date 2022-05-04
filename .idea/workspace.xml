@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added new &quot;Airlabs&quot; API. Tons of new features.">
+
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/map/images/layers-2x.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/map/images/layers.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/map/images/marker-icon-2x.png" afterDir="false" />
@@ -107,6 +111,7 @@
       <workItem from="1651561476580" duration="482000" />
       <workItem from="1651562664940" duration="2208000" />
       <workItem from="1651572280900" duration="3023000" />
+      <workItem from="1651650777975" duration="4572000" />
       <workItem from="1651586845163" duration="9975000" />
       <workItem from="1651655946682" duration="3545000" />
     </task>
@@ -160,7 +165,19 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1651595877420</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Updated the getAirpalesLocation API search.">
+      <created>1651598435417</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1651598435417</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport.">
+      <created>1651652877705</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1651652877705</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +204,9 @@
     <MESSAGE value="Added API, that gets your geolocation via IP address." />
     <MESSAGE value="Added lightbox to the project and added feature, that allows you to click on a flight text and it opens the flight details and information for you." />
     <MESSAGE value="Added new &quot;Airlabs&quot; API. Tons of new features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new &quot;Airlabs&quot; API. Tons of new features." />
+    <MESSAGE value="Updated the getAirpalesLocation API search." />
+    <MESSAGE value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
