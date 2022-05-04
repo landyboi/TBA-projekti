@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added new &quot;Airlabs&quot; API. Tons of new features.">
+      <change afterPath="$PROJECT_DIR$/map/images/layers-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/images/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/images/marker-icon-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/images/marker-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/images/marker-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet-src.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet-src.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet-src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet-src.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/leaflet.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -36,6 +51,7 @@
   </component>
   <component name="ProjectId" id="286Dz35eVq5BHaPHJybveYbx5er" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -43,6 +59,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -58,6 +75,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\map" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,6 +108,7 @@
       <workItem from="1651562664940" duration="2208000" />
       <workItem from="1651572280900" duration="3023000" />
       <workItem from="1651586845163" duration="9975000" />
+      <workItem from="1651655946682" duration="3545000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -155,6 +178,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Firebase stuff" />
     <MESSAGE value="New branch" />
