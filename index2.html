@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="code.js"></script>
+    <script src="search.js"></script>
+    <script src="getLocation.js"></script>
+    <link href="index2.css" rel="stylesheet" />
+    <title>Projekti</title>
+</head>
+<body>
+<div class='flex-box'>
+    <div class='row'>
+        <div class='column'>
+            <div class="kenttahaku">
+                <label for="kenttähakuteksti"> Hae lentokenttää:</label> <input id="kenttähakuteksti" type="text">
+                <button onclick="searchAirportInfo()">Hae!</button>
+            </div>
+        </div>
+        <div class='column'>
+            <div class="konehaku">
+                <label for="lentohakuteksti">Hae lentoa:</label> <input id="lentohakuteksti" type="text">
+                <button onclick="printFlight()">Hae!</button>
+                <button onclick="getPositions()">get location</button>
+                <article id="currentAirport">
+                </article>
+            </div>
+        </div>
+
+        <div class='row 2'>
+            <div class='column'>
+                <div class="Departures">
+                    <article id="Departures">
+                        <h1> Departures: </h1>
+                        <br>
+                        <br>
+                        <br>
+                        <h3>miks eii</h3>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Arrivals">
+                    <article id="Arrivals">
+                        <h1> Arrivals: </h1>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h3>jos nyt kumminki</h3>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Delays">
+                    <article id="Delays">
+                        <h1> Delays today: </h1>
+                        <br>
+                        <br>
+                        <h2>jeee</h2>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
