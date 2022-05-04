@@ -10,7 +10,7 @@ const today = new Date();
 async function getAirport(city) {
   const kenttähakuteksti = document.getElementById("kenttähakuteksti").value;
   let url;
-  if (city == undefined){
+  if (city === undefined){
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + kenttähakuteksti;
   } else{
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + city;
@@ -24,7 +24,7 @@ async function getAirport(city) {
 async function getFlight(number) {
   const lentohakuteksti = document.getElementById("lentohakuteksti").value;
   let url;
-  if (number == undefined){
+  if (number === undefined){
     url = "https://aerodatabox.p.rapidapi.com/flights/number/" + lentohakuteksti + "/";
   } else{
     url = "https://aerodatabox.p.rapidapi.com/flights/number/" + number + "/";
@@ -62,8 +62,11 @@ async function getDelays(){
   return result;
 }
 
-async function getPositions(){
-  const contains = await fetch('https://airlabs.co/api/v9/flights?flight_icao=FIN456&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
-  const result = await contains.json();
-  console.log(result);
+async function getPositions(ICAO){
+  const departures = await fetch('https://airlabs.co/api/v9/flights?dep_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const arrivals = await fetch('https://airlabs.co/api/v9/flights?arr_icao=' + ICAO + '&_view=array&_fields=lat,lng,dir,alt&api_key=b29ee1d8-b889-4115-9807-b65982aa7150');
+  const departuresPositions = await departures.json();
+  const arrivalsPositions = await arrivals.json();
+  console.log(departuresPositions);
+  console.log(arrivalsPositions);
 }
