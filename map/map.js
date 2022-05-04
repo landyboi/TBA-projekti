@@ -12,7 +12,7 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TT
 
 function addToMap (lat, lon, direction, altitude, operator, flightNumber, departure, arrival, status) {
   let marker = L.marker([lat, lon]).addTo(map);
-      marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
+  marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
 }
 
 async function getFlightInfo(){
