@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="code.js"></script>
     <script src="search.js"></script>
+    <script src="login.js"></script>
     <script src="backend.js"></script>
     <script src="getLocation.js"></script>
     <link rel="stylesheet" href="css/backend.css">
@@ -12,11 +13,11 @@
 <body>
 <section>
 <label for="kenttähakuteksti"></label> Tallenna lentokenttä: <input id="kenttähakuteksti" type="text">
-<button onclick="saveAirport()">Hae!</button>
+<button onclick="saveAirport()" id="saveButtonAirport">Hae!</button>
 <br>
 <br>
 <label for="lentohakuteksti"></label> Tallenna lento: <input id="lentohakuteksti" type="text">
-<button onclick="saveFlight()">Hae!</button>
+<button onclick="saveFlight()" id="saveButtonFlight">Hae!</button>
 </section>
 <div id="Info">
 </div>
@@ -33,5 +34,6 @@
 <div id="Delays" class="elements">
   <h1> Delays today: </h1>
 </div>
+<script type="module" src="login.js"></script>
 </body>
 </html>

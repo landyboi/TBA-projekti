@@ -1,4 +1,3 @@
-'use strict'
 //Importataan tarvittavat funktiot
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getDatabase, set, ref, update, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
@@ -15,6 +14,7 @@ const firebaseConfig = {
   appId: "1:941878942786:web:c75c043f3b4b5fee8161db",
   measurementId: "G-SHRT6YBXTN"
 };
+
 // Käynnistetään ja otetaan käyttöön firebase ja database
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
@@ -58,7 +58,7 @@ login.addEventListener('click', (e) =>{
       last_login: dt,
     })
     alert('User loged in')
-    window.location.href = 'Backend.html';
+    //window.location.href = 'Backend.html';
   })
   .catch((error) => {
     alert(error.message);
@@ -76,6 +76,11 @@ onAuthStateChanged(auth, (user) => {
       console.log("  Name: " + profile.displayName);
       console.log("  Email: " + profile.email);
 
+      const array = savedAirports;
+      update(ref(database, 'users/' + user.uid), {
+        your_flights: array,
+      });
+
       //Kirjoitamme joka kerta sivulle kun kirjautuminen on onnistunut
       const div = document.getElementById('loggeduser');
       div.innerHTML = "";
@@ -85,16 +90,9 @@ onAuthStateChanged(auth, (user) => {
        Olet kirjautunut sisään.
       </div`
       div.innerHTML += result;
-      //Tallennamme ensin saamamme arrayn databaseen
-      const array = [1,2,3,4,5]
-      update(ref(database, 'users/' + user.uid), {
-        your_flights: array,
-      })
 
       const flights = document.getElementById('flights');
       flights.innerHTML = "";
-
-      document.getElementById('flights').style.display = "block"
 
       //Haemme databasesta tallennetun arrayn jossa on käyttäjän valitut lennot
       const dbRef = ref(getDatabase());
@@ -128,12 +126,20 @@ logout.addEventListener('click', (e) =>{
        Olet kirjautunut ulos.
       </div`
     div.innerHTML += result;
-
-    //Piilotamme lennot koska kukaan ei ole kirjautunut sisään
-    document.getElementById('flights').style.display = "none"
+    document.getElementById('flights').style.display ="none";
     alert('User loged out')
   }).catch((error) => {
     alert(error.message);
   });
-})
+});
+
+//Tallennamme ensin saamamme arrayn databaseen
+function saveInfo(array){
+  set(ref(database, 'users/' + user.uid), {
+  your_flights: array
+  });
+}
+
+
+
 
