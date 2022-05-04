@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added markers to maps &quot;addToMap&quot; function. Also predefined important data as parameters for the function to use.">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
@@ -162,14 +160,7 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1651652877705</updated>
     </task>
-    <task id="LOCAL-00011" summary="Added markers to maps &quot;addToMap&quot; function. Also predefined important data as parameters for the function to use.">
-      <created>1651661375768</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1651661375768</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,8 +189,7 @@
     <MESSAGE value="Added new &quot;Airlabs&quot; API. Tons of new features." />
     <MESSAGE value="Updated the getAirpalesLocation API search." />
     <MESSAGE value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
-    <MESSAGE value="Added markers to maps &quot;addToMap&quot; function. Also predefined important data as parameters for the function to use." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added markers to maps &quot;addToMap&quot; function. Also predefined important data as parameters for the function to use." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
