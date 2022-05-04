@@ -14,12 +14,17 @@ async function getLocation() {
 
 async function printLocation(){
   const location = await getLocation();
-  console.log(location);
   const city = location.city;
-  console.log(city);
   airportInfo = await getAirport(city);
   ICAO = airportInfo.items[0].icao;
   airportName = airportInfo.items[0].name;
   printArrDep();
-  getPositions(ICAO);
+}
+
+async function getICAO(){
+  const location = await getLocation();
+  const city = location.city;
+  airportInfo = await getAirport(city);
+  ICAO = airportInfo.items[0].icao;
+  return ICAO;
 }

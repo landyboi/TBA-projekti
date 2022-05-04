@@ -16,8 +16,10 @@ function addToMap (lat, lon, direction, altitude, operator, flightNumber, depart
 }
 
 async function getFlightInfo(){
-  const departures = await getPositions("EFHK", "Departures");
-  const arrivals = await getPositions("EFHK", "Arrivals");
+  let icao = await getICAO();
+  console.log(icao);
+  const departures = await getPositions(icao, "Departures");
+  const arrivals = await getPositions(icao, "Arrivals");
   console.log(departures);
   console.log(arrivals);
   let operator = "Unknown";

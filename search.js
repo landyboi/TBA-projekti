@@ -8,9 +8,9 @@ const options = {
 const today = new Date();
 
 async function getAirport(city) {
-  const kenttähakuteksti = document.getElementById("kenttähakuteksti").value;
   let url;
   if (city === undefined){
+    const kenttähakuteksti = document.getElementById("kenttähakuteksti").value;
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + kenttähakuteksti;
   } else{
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + city;
@@ -26,7 +26,7 @@ async function getFlight(number, callsign) {
   if (number === undefined){
     const lentohakuteksti = document.getElementById("lentohakuteksti").value;
     url = "https://aerodatabox.p.rapidapi.com/flights/number/" + lentohakuteksti + "/";
-  } else {
+  } else if (number !== undefined){
     if (callsign === 0) {
       url = "https://aerodatabox.p.rapidapi.com/flights/number/" + number + "/";
     } else {

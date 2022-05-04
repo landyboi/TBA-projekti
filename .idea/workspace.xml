@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Fixed some css styling for index.html">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

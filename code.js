@@ -5,8 +5,10 @@ let airportName = "";
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
   console.log(airportInfo);
-  document.body.appendChild(document.createElement("div"));
-  const div = document.querySelector('div');
+  const newDiv = document.createElement("div");
+  newDiv.id = "Buttons";
+  document.body.appendChild(newDiv);
+  const div = document.getElementById("Buttons");
   for (let i = 0; i<airportInfo.items.length; i++){
     const button = document.createElement("button");
     div.appendChild(document.createElement("br"));
@@ -19,12 +21,11 @@ async function searchAirportInfo(city){
 }
 
 function chooseAirport(selection) {
-  const div = document.querySelector('div');
+  const div = document.getElementById("Buttons");
   div.innerHTML = "";
   ICAO = airportInfo.items[selection].icao;
   airportName = airportInfo.items[selection].name;
   printArrDep();
-  getPositions(ICAO);
 }
 async function printArrDep(){
   const contains = await getArrDep();
@@ -82,7 +83,7 @@ async function printArrDep(){
 }
 
 async function printFlight(number) {
-  const contents = await getFlight(number);
+  const contents = await getFlight(number, 0);
   console.log(contents);
   const article = document.getElementById('Info');
   let departureTime = getTime(contents[0].departure.scheduledTimeLocal);

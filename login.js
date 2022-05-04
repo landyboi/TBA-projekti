@@ -58,6 +58,7 @@ login.addEventListener('click', (e) =>{
       last_login: dt,
     })
     alert('User loged in')
+    window.location.href = 'Backend.html';
   })
   .catch((error) => {
     alert(error.message);
@@ -84,7 +85,6 @@ onAuthStateChanged(auth, (user) => {
        Olet kirjautunut sisään.
       </div`
       div.innerHTML += result;
-
       //Tallennamme ensin saamamme arrayn databaseen
       const array = [1,2,3,4,5]
       update(ref(database, 'users/' + user.uid), {
