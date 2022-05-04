@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added link to flightradar html">
+      <change afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Clouds.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/images/plane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/map/images/kone.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/leaflet.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/leaflet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video/IMG_0636.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video/IMG_0637.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video/IMG_0638.MOV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -101,6 +105,7 @@
       <workItem from="1651650777975" duration="4572000" />
       <workItem from="1651586845163" duration="9975000" />
       <workItem from="1651655946682" duration="3545000" />
+      <workItem from="1651684184584" duration="11236000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>

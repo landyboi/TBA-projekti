@@ -53,8 +53,19 @@ async function getPicture(registeration){
 }
 
 async function getArrDep(){
+  let endtime;
   const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' + ((today.getHours()<10?'0':'') + today.getHours()) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
-  const endtime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' +  + (today.getHours()+1) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
+  if ((today.getHours()+1) === 24) {
+    endtime = today.getFullYear() + '-' + '0' + (today.getMonth() + 1) +
+        '-' + ((today.getDate() < 10 ? '0' : '') + (today.getDate()+1)) + 'T' +
+        + "0" + "0" + ":" +
+        ((today.getMinutes() < 10 ? '0' : '') + today.getMinutes());
+  } else if ((today.getHours()+1) !== 24) {
+    endtime = today.getFullYear() + '-' + '0' + (today.getMonth() + 1) +
+        '-' + ((today.getDate() < 10 ? '0' : '') + today.getDate()) + 'T' +
+        +(today.getHours() + 1) + ":" +
+        ((today.getMinutes() < 10 ? '0' : '') + today.getMinutes());
+  }
   const contains = await fetch('https://aerodatabox.p.rapidapi.com/flights/airports/icao/' + ICAO + '/' + starttime + '/' + endtime + '?withCodeshared=false', options)
   const result = await contains.json();
   return result;

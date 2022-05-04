@@ -5,6 +5,7 @@
     <script src="code.js"></script>
     <script src="search.js"></script>
     <script src="getLocation.js"></script>
+    <script src="/map/map.js"></script>
     <link rel="stylesheet" href="map/leaflet.css"/>
     <script src="map/leaflet.js"></script>
     <script src="login.js"></script>
@@ -52,16 +53,14 @@
 </div>
 
 <section>
-<label for="kenttähakuteksti"></label> Hae lentokenttää: <input id="kenttähakuteksti" type="text">
+<input id="kenttähakuteksti" type="text" placeholder="Vapaasanahaku">
 <button onclick="searchAirportInfo()">Hae!</button>
 <br>
 <br>
-<label for="lentohakuteksti"></label>Hae lentoa: <input id="lentohakuteksti" type="text">
+<input id="lentohakuteksti" type="text" placeholder="Hae lentoa, esim 'AY123'">
 <button onclick="printFlight()">Hae!</button>
 <button onclick="printLocation()">get location</button>
 </section>
-
 </body>
-<script type="module" src="login.js"></script>
 </script>
 </html>
