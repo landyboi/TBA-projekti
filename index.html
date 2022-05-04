@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="map/leaflet.css"/>
     <script src="map/leaflet.js"></script>
     <script src="login.js"></script>
-    <link rel="stylesheet" href="login.css">
-
+    <link rel="stylesheet" href="index.css">
     <title>Projekti</title>
 </head>
 <body>
 
 <a href="map/map.html"target="_blank">Flightradar</a>
-
 <button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button>
 <div id="id01" class="modal">
 
@@ -34,35 +32,65 @@
     </form>
 </div>
 
+<div class='flex-box'>
+    <div class='row'>
+        <div class='column'>
+            <div class="kenttahaku">
+                <label for="kenttähakuteksti"> Hae lentokenttää:</label> <input id="kenttähakuteksti" type="text">
+                <button onclick="searchAirportInfo()">Hae!</button>
+            </div>
+        </div>
+        <div class='column'>
+            <div class="konehaku">
+                <label for="lentohakuteksti">Hae lentoa:</label> <input id="lentohakuteksti" type="text">
+                <button onclick="printFlight()">Hae!</button>
+                <button onclick="getPositions()">get location</button>
+                <article id="currentAirport">
+                </article>
+            </div>
+        </div>
 
-<div id="currentAirport">
+        <div class='row 2'>
+            <div class='column'>
+                <div class="Departures">
+                    <article id="Departures">
+                        <h1> Departures: </h1>
+                        <br>
+                        <br>
+                        <br>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Arrivals">
+                    <article id="Arrivals">
+                        <h1> Arrivals: </h1>
+                        <br>
+                        <br>
+                        <br>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Delays">
+                    <article id="Delays">
+                        <h1> Delays today: </h1>
+                        <br>
+                        <br>
+                        <br>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Info">
+                    <article id="Info">
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="Departures">
-    <h2> Departures: </h2>
-</div>
-
-<div id="Arrivals">
-    <h2> Arrivals: </h2>
-</div>
-
-<div id="Delays">
-    <h2> Delays today: </h2>
-</div>
-
-<div id="Info">
-</div>
-
-<section>
-<label for="kenttähakuteksti"></label> Hae lentokenttää: <input id="kenttähakuteksti" type="text">
-<button onclick="searchAirportInfo()">Hae!</button>
-<br>
-<br>
-<label for="lentohakuteksti"></label>Hae lentoa: <input id="lentohakuteksti" type="text">
-<button onclick="printFlight()">Hae!</button>
-<button onclick="printLocation()">get location</button>
-</section>
 
 </body>
 <script type="module" src="login.js"></script>
-</script>
 </html>
