@@ -97,8 +97,17 @@ async function printFlight(number) {
   info1.innerHTML = "Status: " + contents[0].status;
   info2.innerHTML = "Departure: " + departureTime + " | " + contents[0].departure.airport.name;
   info3.innerHTML = "Arrival: " +  arrivalTime + " | " + contents[0].arrival.airport.name;
-  info4.innerHTML = "Operator: " + contents[0].airline.name;
-  info5.innerHTML = "Baggage belt: " + contents[0].arrival.baggageBelt;
+  if (contents[0].aircraft === undefined) {
+    info4.innerHTML = "Operator: " + contents[0].airline.name
+  } else {
+    info4.innerHTML = "Operator: " + contents[0].airline.name +
+        " | Aircraft: " + contents[0].aircraft.model;
+  }
+  if (contents[0].arrival.baggageBelt === undefined) {
+    info5.innerHTML = "Baggage belt: Unknown";
+  } else {
+    info5.innerHTML = "Baggage belt: " + contents[0].arrival.baggageBelt;
+  }
   article.appendChild(info1);
   article.appendChild(info2);
   article.appendChild(info3);

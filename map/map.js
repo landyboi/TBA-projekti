@@ -1,5 +1,5 @@
 
-let map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map').setView([55.22, 21.01], 4);
 
 L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TTlBLo55Yy2H8',{
   tileSize: 512,
@@ -8,7 +8,6 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TT
   crossOrigin: true
 }).addTo(map);
 
-
 function addToMap (lat, lon, direction, altitude, operator, flightNumber, departure, arrival, status) {
   let marker = L.marker([lat, lon]).addTo(map);
   marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
@@ -16,7 +15,6 @@ function addToMap (lat, lon, direction, altitude, operator, flightNumber, depart
 
 async function getFlightInfo(){
   let icao = await getICAO();
-  console.log(icao);
   const departures = await getPositions(icao, "Departures");
   const arrivals = await getPositions(icao, "Arrivals");
   console.log(departures);
