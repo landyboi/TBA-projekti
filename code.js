@@ -117,6 +117,7 @@ async function printFlight(number) {
   const url = await getPicture(reg);
   if (url !== undefined){
     let image = document.createElement('img');
+    image.style.maxWidth = "400px";
     image.src = url;
     article.appendChild(image);
   }
