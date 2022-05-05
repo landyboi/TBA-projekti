@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c8175d1-9caa-4d79-a547-e729d96d47d5" name="Changes" comment="Fixed a few validations errors">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,7 @@
       <workItem from="1651650777975" duration="4572000" />
       <workItem from="1651586845163" duration="9975000" />
       <workItem from="1651655946682" duration="3545000" />
+      <workItem from="1651723940785" duration="5492000" />
       <workItem from="1651730178701" duration="1981000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">

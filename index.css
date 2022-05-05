@@ -6,7 +6,7 @@ body {
     margin: 10px;
 }
 
-#signUp, #login, #logout, #loginButton{
+#signUp, #login, #logout, #loginButton, button {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -14,8 +14,36 @@ body {
     border: none;
     cursor: pointer;
     width:auto;
+    display: inline-block;
+    border: 1px solid #ccc;
 }
-#kenttähakuteksti, #lentohakuteksti {
+
+#flightradarlink{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 50px;
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    height: 15px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+#loggeduser{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 168px;
+    height: 15px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+#kenttähakuteksti, #lentohakuteksti{
     width: auto;
     padding: 12px 20px;
     margin: 8px 0;
@@ -23,6 +51,7 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
 #email, #username, #password{
     width: 100%;
     padding: 12px 20px;
@@ -39,12 +68,12 @@ body {
     width: 100%;
   }
   
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
   
 
 label   {

@@ -9,14 +9,14 @@ function saveFlight() {
 }
 
 function saveAirport() {
-  //const kenttahakuteksti = document.getElementById("kenttähakuteksti").value;
+  const kenttahakuteksti = document.getElementById("kenttähakuteksti").value;
   savedAirports.push(["london"]);
   console.log(kenttahakuteksti);
-  //searchAirportInfo(kenttahakuteksti);
-  //const elements = document.getElementsByClassName("elements");
-  /*for(let i = 0; i<elements.length; i++){
+  searchAirportInfo(kenttahakuteksti);
+  const elements = document.getElementsByClassName("elements");
+  for(let i = 0; i<elements.length; i++){
     elements[i].style.display = "block";
-  }*/
+  }
 }
 
 

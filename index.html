@@ -13,6 +13,7 @@
 </head>
 <body>
 
+
 <a href="map/map.html" target="_blank">Flightradar</a>
 <a href="about.html" target="_blank">About us</a>
 <button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button>
@@ -32,7 +33,6 @@
         </div>
     </form>
 </div>
-
 <div class='flex-box'>
     <div class='row'>
         <div class='column'>
@@ -45,11 +45,45 @@
             <div class="konehaku">
                 <label for="lentohakuteksti">Hae lentoa:</label> <input id="lentohakuteksti" type="text">
                 <button onclick="printFlight()">Hae!</button>
-                <button onclick="printLocation()">get location</button>
+                <button onclick="printLocation()">Hae sijainnillasi</button>
                 <article id="currentAirport">
                 </article>
             </div>
         </div>
+        <div>
+            <div class="flightradarlink">
+                <a id="flightradarlink" href="map/map.html" target="_blank">Flightradar</a>
+            </div>
+        </div>
+        <div>
+            <div class="Loggeduser">
+                <div id="loggeduser">
+                    <a>You are not logged in yet.</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="login">
+                <button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button>
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        </div>
+                        <div class="container">
+                            <input type="text" id="username" name="username" placeholder="Username"/>
+                            <input type="text" id="email" name="email" placeholder="E-mail"/>
+                            <input type="password" id="password" name="password" placeholder="Password"/>
+                            <button type="button" id="signUp" name="signup_submit" value="Sign up">Sign up</button>
+                            <button type="button" id="login" name="login" value="Login">Login</button>
+                            <button type="button" id="logout" name="logout" value="Logout">Log out</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 
         <div class='row 2'>
             <div class='column'>
@@ -86,6 +120,13 @@
                 <div class="Info">
                     <article id="Info">
                         <h2> Koneen tiedot:</h2>
+                    </article>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="Info">
+                    <article id="arrayInfo">
+                        <h2> Lentosi: </h2>
                     </article>
                 </div>
             </div>
