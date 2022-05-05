@@ -5,7 +5,6 @@ let airportArray = [];
 
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
-  console.log(airportInfo);
   const newDiv = document.createElement("div");
   newDiv.id = "Buttons";
   document.body.appendChild(newDiv);
@@ -30,7 +29,6 @@ function chooseAirport(selection) {
 }
 async function printArrDep(){
   const contains = await getArrDep();
-  console.log(contains);
   const departures = document.getElementById('Departures');
   const arrivals = document.getElementById('Arrivals');
   resetText(1);
@@ -86,44 +84,55 @@ async function printArrDep(){
 async function printFlight(number) {
   const contents = await getFlight(number, 0);
   console.log(contents);
-  const article = document.getElementById('Info');
-  let departureTime = getTime(contents[0].departure.scheduledTimeLocal);
-  let arrivalTime = getTime(contents[0].arrival.scheduledTimeLocal);
-  resetText(2);
-  const info1 = document.createElement('h1');
-  const info2 = document.createElement('p');
-  const info3 = document.createElement('p');
-  const info4 = document.createElement('p');
-  const info5 = document.createElement('p');
-  info1.innerHTML = "Status: " + contents[0].status;
-  info2.innerHTML = "Departure: " + departureTime + " | " + contents[0].departure.airport.name;
-  info3.innerHTML = "Arrival: " +  arrivalTime + " | " + contents[0].arrival.airport.name;
-  airportArray.push([departureTime + " | " +contents[0].arrival.airport.name + '<br>']);
-  if (contents[0].aircraft === undefined) {
-    info4.innerHTML = "Operator: " + contents[0].airline.name
+  if (contents.length > 0) {
+    const article = document.getElementById('Info');
+    let departureTime = getTime(contents[0].departure.scheduledTimeLocal);
+    let arrivalTime = getTime(contents[0].arrival.scheduledTimeLocal);
+    resetText(2);
+    const info1 = document.createElement('h1');
+    const info2 = document.createElement('p');
+    const info3 = document.createElement('p');
+    const info4 = document.createElement('p');
+    const info5 = document.createElement('p');
+    info1.innerHTML = "Status: " + contents[0].status;
+    info2.innerHTML = "Departure: " + departureTime + " | " +
+        contents[0].departure.airport.name;
+    info3.innerHTML = "Arrival: " + arrivalTime + " | " +
+        contents[0].arrival.airport.name;
+    airportArray.push(
+        [departureTime + " | " + contents[0].arrival.airport.name + '<br>']);
+    if (contents[0].aircraft === undefined) {
+      info4.innerHTML = "Operator: " + contents[0].airline.name
+    } else {
+      info4.innerHTML = "Operator: " + contents[0].airline.name +
+          " | Aircraft: " + contents[0].aircraft.model;
+    }
+    if (contents[0].arrival.baggageBelt === undefined) {
+      info5.innerHTML = "Baggage belt: Unknown";
+    } else {
+      info5.innerHTML = "Baggage belt: " + contents[0].arrival.baggageBelt;
+    }
+    article.appendChild(info1);
+    article.appendChild(info2);
+    article.appendChild(info3);
+    article.appendChild(info4);
+    article.appendChild(info5);
+    if (contents[0].aircraft === undefined) {
+      console.log("No photo available!")
+    } else {
+      const reg = contents[0].aircraft.reg;
+      const url = await getPicture(reg);
+      if (url !== undefined) {
+        let image = document.createElement('img');
+        image.style.maxWidth = "400px";
+        image.style.marginRight = "15px";
+        image.style.marginBottom = "10px";
+        image.src = url;
+        article.appendChild(image);
+      }
+    }
   } else {
-    info4.innerHTML = "Operator: " + contents[0].airline.name +
-        " | Aircraft: " + contents[0].aircraft.model;
-  }
-  if (contents[0].arrival.baggageBelt === undefined) {
-    info5.innerHTML = "Baggage belt: Unknown";
-  } else {
-    info5.innerHTML = "Baggage belt: " + contents[0].arrival.baggageBelt;
-  }
-  article.appendChild(info1);
-  article.appendChild(info2);
-  article.appendChild(info3);
-  article.appendChild(info4);
-  article.appendChild(info5);
-  const reg = contents[0].aircraft.reg;
-  const url = await getPicture(reg);
-  if (url !== undefined){
-    let image = document.createElement('img');
-    image.style.maxWidth = "400px";
-    image.style.marginRight = "15px";
-    image.style.marginBottom = "10px";
-    image.src = url;
-    article.appendChild(image);
+    console.log("No flight found!");
   }
 }
 
@@ -132,10 +141,20 @@ async function printDelays(){
   const delays = document.getElementById('Delays');
   const info1 = document.createElement('p');
   const info2 = document.createElement('p');
+  info1.id = "DeparturesDelayIndex";
+  info2.id = "ArrivalsDelayIndex";
   info1.innerHTML = "Delays in departures: " + (contents.departuresDelayInformation.delayIndex).toFixed(2);
   info2.innerHTML = "Delays in arrivals: " + (contents.arrivalsDelayInformation.delayIndex).toFixed(2);
   delays.appendChild(info1);
   delays.appendChild(info2);
+  let text1 = document.getElementById("DeparturesDelayIndex");
+  let text2 = document.getElementById("DeparturesDelayIndex");
+  text1.onclick = () => {
+    printDelaysInfo();
+  }
+  text2.onclick = () => {
+    printDelaysInfo();
+  }
 }
 
 function getTime(date){
@@ -170,4 +189,19 @@ function resetText(selection){
     const article = document.getElementById('Info');
     article.innerHTML = "";
   }
+}
+
+function printDelaysInfo(){
+  resetText(2);
+  const article = document.getElementById('Info');
+  const header = document.createElement('h1');
+  const text1 = document.createElement('p');
+  const text2 = document.createElement('p');
+  header.innerHTML = "Delays index:";
+  text1.innerHTML = "A low index (0-1) indicates that departures are running relatively smoothly.";
+  text2.innerHTML = "A higher index (4-5) is indicative of significant delays and flight operations disruptions.";
+  article.appendChild(header);
+  article.appendChild(text1);
+  article.appendChild(document.createElement("br"));
+  article.appendChild(text2);
 }

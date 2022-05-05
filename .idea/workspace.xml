@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="centered video in about.html">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,8 +99,7 @@
       <workItem from="1651730178701" duration="1981000" />
       <workItem from="1651734684159" duration="5883000" />
       <workItem from="1651742385302" duration="308000" />
-      <workItem from="1651753590599" duration="5515000" />
-      <workItem from="1651772415180" duration="7800000" />
+      <workItem from="1651767353639" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -181,13 +176,19 @@
       <option name="presentableId" value="LOCAL−00012" />
       <updated>1651736644483</updated>
     </task>
-    <task id="LOCAL−00013" summary="centered video in about.html">
-      <created>1651743430032</created>
+    <task id="LOCAL−00013" summary="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed.">
+      <created>1651766363058</created>
       <option name="number" value="LOCAL−00013" />
       <option name="presentableId" value="LOCAL−00013" />
-      <updated>1651743430032</updated>
+      <updated>1651766363058</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="-">
+      <created>1651767406243</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1651767406243</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,8 +219,9 @@
     <MESSAGE value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
     <MESSAGE value="Fixed some css styling for index.html" />
     <MESSAGE value="bug fixing, finaly working login.js as should" />
-    <MESSAGE value="centered video in about.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="centered video in about.html" />
+    <MESSAGE value="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed." />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

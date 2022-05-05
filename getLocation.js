@@ -15,9 +15,16 @@ async function printLocation(){
   const location = await getLocation();
   const city = location.city;
   airportInfo = await getAirport(city);
-  ICAO = airportInfo.items[0].icao;
-  airportName = airportInfo.items[0].name;
-  printArrDep();
+  if (airportInfo.length === 0){
+    const location = document.getElementById('currentAirport');
+    const message = document.createElement('h1');
+    message.innerHTML = "No airports found from your current location!";
+    location.appendChild(message);
+  } else {
+    ICAO = airportInfo.items[0].icao;
+    airportName = airportInfo.items[0].name;
+    printArrDep();
+  }
 }
 
 async function getICAO(city){
@@ -26,6 +33,10 @@ async function getICAO(city){
     city = location.city;
   }
   airportInfo = await getAirport(city);
-  ICAO = airportInfo.items[0].icao;
-  return ICAO;
+  if (airportInfo.items.length === 0){
+    console.log("No airport found!")
+  } else {
+    ICAO = airportInfo.items[0].icao;
+    return ICAO;
+  }
 }
