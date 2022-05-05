@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="bug fixing, finaly working login.js as should">
-      <change afterPath="$PROJECT_DIR$/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/miro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/timi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tuomas.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videos/video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/getLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +107,7 @@
       <workItem from="1651723940785" duration="5492000" />
       <workItem from="1651730178701" duration="1981000" />
       <workItem from="1651734684159" duration="5883000" />
+      <workItem from="1651742385302" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>

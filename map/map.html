@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="map.css" />
     <script src="leaflet.js"></script>
 </head>
 <body onload="getFlightInfo()">
-    <div id='map'></div>
+<input id="hakuteksti" type="text" placeholder="Hae esitettäviä lentoja kaupungin nimellä, Esim. 'Helsinki'">
+<button onclick="changeCity()" id="changeCity">Hae!</button>
+<br>
+<br>
+<div id='map'></div>
 </body>
 <script src="map.js"></script>
 <script src="/search.js"></script>

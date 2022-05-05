@@ -1,0 +1,12 @@
+#hakuteksti{
+    position: absolute;
+    top: 1.5%;
+    width: 80%;
+}
+
+#changeCity{
+    position: absolute;
+    top: 1.5%;
+    right: 3%;
+    width: 15%;
+}

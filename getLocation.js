@@ -20,9 +20,11 @@ async function printLocation(){
   printArrDep();
 }
 
-async function getICAO(){
-  const location = await getLocation();
-  const city = location.city;
+async function getICAO(city){
+  if (city === undefined) {
+    const location = await getLocation();
+    city = location.city;
+  }
   airportInfo = await getAirport(city);
   ICAO = airportInfo.items[0].icao;
   return ICAO;
