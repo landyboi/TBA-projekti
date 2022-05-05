@@ -9,48 +9,17 @@
     <script src="map/leaflet.js"></script>
     <script type="module"  src="login.js"></script>
     <link rel="stylesheet" href="index.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>MyFlightPRO</title>
 </head>
 <body>
 <div class='flex-box'>
     <div class='row'>
-        <div class='column'>
-            <div class="kenttahaku">
-                <label for="kenttähakuteksti"> Get airport:</label> <input id="kenttähakuteksti" type="text">
-                <button onclick="searchAirportInfo()">Search!</button>
-            </div>
-        </div>
-        <div class='column'>
-            <div class="konehaku">
-                <label for="lentohakuteksti">Get flight:</label> <input id="lentohakuteksti" type="text">
-                <button onclick="printFlight()">Search!</button>
-                <button onclick="printLocation()">Search by location</button>
-                <article id="currentAirport">
-                </article>
-            </div>
-        </div>
-        <div>
-            <div class="aboutus">
-                <a id="aboutus" href="about.html" target="_blank">About us</a>
-            </div>
-        </div>
-        <div>
-            <div class="flightradarlink">
-                <a id="flightradarlink" href="map/map.html" target="_blank">Flightradar</a>
-            </div>
-        </div>
-        <div>
-            <div class="Loggeduser">
-                <div id="loggeduser">
-                    <a>You are not logged in yet.</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="login">
-                <button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button>
+        <ul>
+            <li class="flightradarlink"><a id="flightradarlink" href="map/map.html" target="_blank">Flightradar</a></li>
+            <li class="aboutus"><a id="aboutus" href="about.html" target="_blank">About us</a></li>
+            <li class="login" style="float: right"><button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button></li>
                 <div id="id01" class="modal">
-
                     <form class="modal-content animate" action="/action_page.php" method="post">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -65,13 +34,33 @@
                         </div>
                     </form>
                 </div>
+                    <li class="Loggeduser" style="float: right"><a id="loggeduser">You are not logged in yet.</a></li>
+        </ul>
+    </div>
+        <div class="row 3">
+            <div class='column'>
+                <br>
+                <div class="kenttahaku">
+                    <label for="kenttähakuteksti"> Get airport:</label> <input id="kenttähakuteksti" type="text">
+                    <button onclick="searchAirportInfo()">Search!</button>
+                </div>
+            </div>
+            <div class='column'>
+                <br>
+                <div class="konehaku">
+                    <label for="lentohakuteksti">Get flight:</label> <input id="lentohakuteksti" type="text">
+                    <button onclick="printFlight()">Search! </button>
+                    <button onclick="printLocation()">Search by location</button>
+                    <article id="currentAirport">
+                    </article>
+                </div>
             </div>
         </div>
         <div class='row 2'>
             <div class='column'>
                 <div class="Departures">
                     <article id="Departures">
-                        <h2> Departures: </h2>
+                        <h2> Departures <i class='fas fa-plane-departure'></i></h2>
                         <br>
                         <br>
                         <br>
@@ -81,7 +70,7 @@
             <div class='column'>
                 <div class="Arrivals">
                     <article id="Arrivals">
-                        <h2> Arrivals: </h2>
+                        <h2> Arrivals <i class='fas fa-plane-arrival'></i></h2>
                         <br>
                         <br>
                         <br>
@@ -91,7 +80,7 @@
             <div class='column'>
                 <div class="Delays">
                     <article id="Delays">
-                        <h2> Today's delays: </h2>
+                        <h2> Today's delays <i class='fas fa-clock'></i></h2>
                         <br>
                         <br>
                         <br>
@@ -101,14 +90,20 @@
             <div class='column'>
                 <div class="Info">
                     <article id="Info">
-                        <h2> Planes details:</h2>
+                        <h2> Plane details <i class='fas fa-info-circle'></i></h2>
+                        <br>
+                        <br>
+                        <br>
                     </article>
                 </div>
             </div>
             <div class='column'>
                 <div class="Info">
                     <article id="arrayInfo">
-                        <h2> Saved flights:  </h2>
+                        <h2> Saved flights <i class='fas fa-map-pin'></i></h2>
+                        <br>
+                        <br>
+                        <br>
                     </article>
                 </div>
             </div>

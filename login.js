@@ -110,7 +110,7 @@ onAuthStateChanged(auth, (user) => {
         if (snapshot.exists()) {
           console.log(snapshot.val().your_flights);
           const result_flights =
-              `<h2> Saved flights: </h2>
+              `<h2> Saved flights <i class='fas fa-map-pin'></i></h2>
                 <div>
                 ${snapshot.val().your_flights}
                 </div`
@@ -139,7 +139,7 @@ logout.addEventListener('click', (e) =>{
     const flights = document.getElementById('arrayInfo');
     flights.innerHTML = "";
     const result_flights =
-        `<h2> Saved flights: </h2>
+        `<h2> Saved flights <i class='fas fa-map-pin'></i></h2>
                 <div>
                 
                 </div`

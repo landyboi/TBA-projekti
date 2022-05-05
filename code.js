@@ -160,9 +160,9 @@ function resetText(selection){
     const text1 = document.createElement('h1');
     const text2 = document.createElement('h1');
     const text3 = document.createElement('h1');
-    text1.innerHTML = "Departures:";
-    text2.innerHTML = "Arrivals:";
-    text3.innerHTML = "Delays today:";
+    text1.innerHTML = "Departures <i class='fas fa-plane-departure'></i><br><br><br>";
+    text2.innerHTML = "Arrivals <i class='fas fa-plane-arrival'></i><br><br><br>";
+    text3.innerHTML = "Delays today <i class='fas fa-clock'></i><br><br><br>";
     departures.appendChild(text1);
     arrivals.appendChild(text2);
     delays.appendChild(text3);

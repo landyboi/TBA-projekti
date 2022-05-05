@@ -1,12 +1,55 @@
 body {
-    background-image: url(images/site_background.jpg)
+    background-image: url("images/planes.webp")
 }
 
 .flex-box   {
     margin: 10px;
 }
 
-#signUp, #login, #logout, #loginButton, button {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+#signUp:hover, #login:hover, #logout:hover, #loginButton:hover, #flightradarlink:hover, #aboutus:hover{
+    opacity: 0.8;
+    color:#000!important;
+    background-color:#fff!important
+}
+#loginButton{
+    background-color: #04AA6D;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 50px;
+    border: none;
+    cursor: pointer;
+    width:auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    white-space: normal;
+}
+
+#signUp, #login, #logout, button {
     background-color: #04AA6D;
     color: black;
     padding: 14px 20px;
@@ -16,6 +59,7 @@ body {
     width:auto;
     display: inline-block;
     border: 1px solid #ccc;
+    white-space: normal;
 }
 
 #flightradarlink{
@@ -35,7 +79,7 @@ body {
     background-color: #04AA6D;
     color: black;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 50px;
     border: none;
     width: 168px;
     height: 15px;
@@ -47,7 +91,7 @@ body {
     background-color: #04AA6D;
     color: black;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 50px;
     border: none;
     width: 60px;
     height: 15px;
@@ -89,7 +133,7 @@ body {
   
 
 label   {
-    background-color: rgba(233, 240, 240, 0.5);
+    background-color: #F5F5F5;
     border-radius: 10px;
     padding: 1vw;
     width: 15vw;
@@ -98,7 +142,7 @@ label   {
 }
 
 .Departures   {
-    background-color: rgba(233, 240, 240, 0.5);
+    background-color: #F5F5F5;
     border-radius: 20px;
     padding-left: 15px;
     padding-top: 10px;
@@ -106,7 +150,7 @@ label   {
 }
 
 .Arrivals   {
-    background-color: rgba(233, 240, 240, 0.5);
+    background-color: #F5F5F5;
     border-radius: 20px;
     padding-left: 15px;
     padding-top: 10px;
@@ -114,14 +158,14 @@ label   {
 }
 
 .Delays   {
-    background-color: rgba(233, 240, 240, 0.5);
+    background-color: #F5F5F5;
     border-radius: 20px;
     padding-left: 15px;
     padding-top: 10px;
     margin: 2vw;
 }
 .Info {
-    background-color: rgba(233, 240, 240, 0.5);
+    background-color: #F5F5F5;
     border-radius: 20px;
     padding-left: 15px;
     padding-top: 10px;
@@ -139,6 +183,8 @@ h1 {
 
 button:hover {
     opacity: 0.8;
+    color:#000!important;
+    background-color:#fff!important
 }
 
 .container {
