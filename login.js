@@ -53,12 +53,20 @@ login.addEventListener('click', (e) =>{
     const user = userCredential.user;
     const dt = new Date();
 
+    const div = document.getElementById('loggeduser');
+    div.innerHTML = "";
+    const result =
+        `
+      <div>
+       Olet kirjautunut sisään.
+      </div`
+    div.innerHTML += result;
+
     //Tallennamme databaseen tiedon milloin kirjauduit sisään
     update(ref(database, 'users/' + user.uid),{
       last_login: dt,
-    })
+    });
     alert('User loged in')
-    //window.location.href = 'Backend.html';
   })
   .catch((error) => {
     alert(error.message);
@@ -76,7 +84,8 @@ onAuthStateChanged(auth, (user) => {
       console.log("  Name: " + profile.displayName);
       console.log("  Email: " + profile.email);
 
-      const array = savedAirports;
+      //Tallennamme ensin saamamme arrayn databaseen
+      const array = [1,2,3,4,5];
       update(ref(database, 'users/' + user.uid), {
         your_flights: array,
       });
@@ -91,7 +100,7 @@ onAuthStateChanged(auth, (user) => {
       </div`
       div.innerHTML += result;
 
-      const flights = document.getElementById('flights');
+      const flights = document.getElementById('arrayInfo');
       flights.innerHTML = "";
 
       //Haemme databasesta tallennetun arrayn jossa on käyttäjän valitut lennot
@@ -101,7 +110,8 @@ onAuthStateChanged(auth, (user) => {
         if (snapshot.exists()) {
           console.log(snapshot.val().your_flights);
           const result_flights =
-              `<div>
+              `<h2> Lentosi: </h2>
+                <div>
                 Lähtevät lentosi: ${snapshot.val().your_flights}
                 </div`
           flights.innerHTML += result_flights
@@ -116,7 +126,6 @@ onAuthStateChanged(auth, (user) => {
 //Tämän avulla pystymme kirjautumaan ulos käyttäjästä
 logout.addEventListener('click', (e) =>{
   signOut(auth).then(() => {
-
     //Vaihdamme henkilön nimen tilalle tekstin missä kerromme hänen kirjautuneen ulos
     const div = document.getElementById('loggeduser');
     div.innerHTML = "";
@@ -132,14 +141,3 @@ logout.addEventListener('click', (e) =>{
     alert(error.message);
   });
 });
-
-//Tallennamme ensin saamamme arrayn databaseen
-function saveInfo(array){
-  set(ref(database, 'users/' + user.uid), {
-  your_flights: array
-  });
-}
-
-
-
-
