@@ -1,6 +1,7 @@
 let ICAO = "";
 let airportInfo = "";
 let airportName = "";
+let airportArray = [];
 
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
@@ -97,6 +98,7 @@ async function printFlight(number) {
   info1.innerHTML = "Status: " + contents[0].status;
   info2.innerHTML = "Departure: " + departureTime + " | " + contents[0].departure.airport.name;
   info3.innerHTML = "Arrival: " +  arrivalTime + " | " + contents[0].arrival.airport.name;
+  airportArray.push([departureTime + " | " +contents[0].arrival.airport.name + '<br>']);
   if (contents[0].aircraft === undefined) {
     info4.innerHTML = "Operator: " + contents[0].airline.name
   } else {

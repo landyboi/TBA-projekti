@@ -58,7 +58,7 @@ login.addEventListener('click', (e) =>{
     const result =
         `
       <div>
-       Olet kirjautunut sisään.
+       You are logged in.
       </div`
     div.innerHTML += result;
 
@@ -85,7 +85,7 @@ onAuthStateChanged(auth, (user) => {
       console.log("  Email: " + profile.email);
 
       //Tallennamme ensin saamamme arrayn databaseen
-      const array = [1,2,3,4,5];
+      const array =airportArray;
       update(ref(database, 'users/' + user.uid), {
         your_flights: array,
       });
@@ -96,7 +96,7 @@ onAuthStateChanged(auth, (user) => {
       const result =
           `
       <div>
-       Olet kirjautunut sisään.
+       You are logged in.
       </div`
       div.innerHTML += result;
 
@@ -110,11 +110,11 @@ onAuthStateChanged(auth, (user) => {
         if (snapshot.exists()) {
           console.log(snapshot.val().your_flights);
           const result_flights =
-              `<h2> Lentosi: </h2>
+              `<h2> Saved flights: </h2>
                 <div>
-                Lähtevät lentosi: ${snapshot.val().your_flights}
+                ${snapshot.val().your_flights}
                 </div`
-          flights.innerHTML += result_flights
+          flights.innerHTML += result_flights;
         }
       }).catch((error) => {
         console.error(error);
@@ -132,11 +132,19 @@ logout.addEventListener('click', (e) =>{
     const result =
         `
       <div>
-       Olet kirjautunut ulos.
+       You have logged out.
       </div`
     div.innerHTML += result;
-    document.getElementById('flights').style.display ="none";
-    alert('User loged out')
+
+    const flights = document.getElementById('arrayInfo');
+    flights.innerHTML = "";
+    const result_flights =
+        `<h2> Saved flights: </h2>
+                <div>
+                
+                </div`
+    flights.innerHTML += result_flights;
+    alert('User logged out')
   }).catch((error) => {
     alert(error.message);
   });

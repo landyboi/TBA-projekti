@@ -16,15 +16,15 @@
     <div class='row'>
         <div class='column'>
             <div class="kenttahaku">
-                <label for="kenttähakuteksti"> Hae lentokenttää:</label> <input id="kenttähakuteksti" type="text">
-                <button onclick="searchAirportInfo()">Hae!</button>
+                <label for="kenttähakuteksti"> Get airport:</label> <input id="kenttähakuteksti" type="text">
+                <button onclick="searchAirportInfo()">Search!</button>
             </div>
         </div>
         <div class='column'>
             <div class="konehaku">
-                <label for="lentohakuteksti">Hae lentoa:</label> <input id="lentohakuteksti" type="text">
-                <button onclick="printFlight()">Hae!</button>
-                <button onclick="printLocation()">Hae sijainnillasi</button>
+                <label for="lentohakuteksti">Get flight:</label> <input id="lentohakuteksti" type="text">
+                <button onclick="printFlight()">Search!</button>
+                <button onclick="printLocation()">Search by location</button>
                 <article id="currentAirport">
                 </article>
             </div>
@@ -73,7 +73,7 @@
             <div class='column'>
                 <div class="Departures">
                     <article id="Departures">
-                        <h2> Lähtevät: </h2>
+                        <h2> Departures: </h2>
                         <br>
                         <br>
                         <br>
@@ -83,7 +83,7 @@
             <div class='column'>
                 <div class="Arrivals">
                     <article id="Arrivals">
-                        <h2> Saapuvat: </h2>
+                        <h2> Arrivals: </h2>
                         <br>
                         <br>
                         <br>
@@ -93,7 +93,7 @@
             <div class='column'>
                 <div class="Delays">
                     <article id="Delays">
-                        <h2> Tänään myöhästyneet: </h2>
+                        <h2> Today's delays: </h2>
                         <br>
                         <br>
                         <br>
@@ -103,14 +103,14 @@
             <div class='column'>
                 <div class="Info">
                     <article id="Info">
-                        <h2> Koneen tiedot:</h2>
+                        <h2> Planes details:</h2>
                     </article>
                 </div>
             </div>
             <div class='column'>
                 <div class="Info">
                     <article id="arrayInfo">
-                        <h2> Lentosi: </h2>
+                        <h2> Saved flights:  </h2>
                     </article>
                 </div>
             </div>

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Fixed a few validations errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c8175d1-9caa-4d79-a547-e729d96d47d5" name="Changes" comment="haut päälle vierekkäin, alle tiedot kolme vierekkäin" />
+      <changelist id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Fixed a few validations errors" />
       <created>1650528400426</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -98,6 +99,7 @@
       <workItem from="1651655946682" duration="3545000" />
       <workItem from="1651723940785" duration="5492000" />
       <workItem from="1651730178701" duration="1981000" />
+      <workItem from="1651734684159" duration="1637000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
