@@ -118,6 +118,8 @@ async function printFlight(number) {
   if (url !== undefined){
     let image = document.createElement('img');
     image.style.maxWidth = "400px";
+    image.style.marginRight = "15px";
+    image.style.marginBottom = "10px";
     image.src = url;
     article.appendChild(image);
   }

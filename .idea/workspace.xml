@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+    <list default="true" id="2c8175d1-9caa-4d79-a547-e729d96d47d5" name="Changes" comment="Fixed a few validations errors">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
     </list>
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="rn_visiot" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,14 +63,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\map\images" />
       <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\map" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="New branch" />
+      <changelist id="2c8175d1-9caa-4d79-a547-e729d96d47d5" name="Changes" comment="haut päälle vierekkäin, alle tiedot kolme vierekkäin" />
       <created>1650528400426</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -100,6 +96,7 @@
       <workItem from="1651586845163" duration="9975000" />
       <workItem from="1651655946682" duration="3545000" />
       <workItem from="1651723940785" duration="5492000" />
+      <workItem from="1651730178701" duration="1981000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -170,35 +167,7 @@
       <option name="project" value="LOCAL" />
       <updated>1651673845642</updated>
     </task>
-    <task id="LOCAL-00012" summary="Added link to flightradar html">
-      <created>1651674206349</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1651674206349</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Removed unused stuff. Also added a new marker icon.">
-      <created>1651684061728</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1651684061728</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added some design for the website.">
-      <created>1651694213997</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1651694213997</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Added some design for the website.">
-      <created>1651695105892</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1651695105892</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,10 +197,7 @@
     <MESSAGE value="Updated the getAirpalesLocation API search." />
     <MESSAGE value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
     <MESSAGE value="Fixed some css styling for index.html" />
-    <MESSAGE value="Added link to flightradar html" />
-    <MESSAGE value="Removed unused stuff. Also added a new marker icon." />
-    <MESSAGE value="Added some design for the website." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some design for the website." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some css styling for index.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
