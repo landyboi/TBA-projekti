@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed.">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +99,7 @@
       <workItem from="1651730178701" duration="1981000" />
       <workItem from="1651734684159" duration="5883000" />
       <workItem from="1651742385302" duration="308000" />
+      <workItem from="1651767353639" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -181,7 +182,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1651766363058</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="-">
+      <created>1651767406243</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1651767406243</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +220,8 @@
     <MESSAGE value="Fixed some css styling for index.html" />
     <MESSAGE value="bug fixing, finaly working login.js as should" />
     <MESSAGE value="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed." />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
