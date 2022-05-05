@@ -1,23 +1,22 @@
 
-let map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map').setView([55.22, 21.01], 4);
 
 L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TTlBLo55Yy2H8',{
   tileSize: 512,
   zoomOffset: -1,
   minZoom: 1,
-  attribution: "<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
   crossOrigin: true
 }).addTo(map);
 
-
 function addToMap (lat, lon, direction, altitude, operator, flightNumber, departure, arrival, status) {
   let marker = L.marker([lat, lon]).addTo(map);
-      marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
+  marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
 }
 
 async function getFlightInfo(){
-  const departures = await getPositions("EFHK", "Departures");
-  const arrivals = await getPositions("EFHK", "Arrivals");
+  let icao = await getICAO();
+  const departures = await getPositions(icao, "Departures");
+  const arrivals = await getPositions(icao, "Arrivals");
   console.log(departures);
   console.log(arrivals);
   let operator = "Unknown";

@@ -2,15 +2,15 @@ const options = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com',
-    'X-RapidAPI-Key': '74f0927946mshe7281fe540d5c51p1a2aa5jsnd6cc563ec47c'
+    'X-RapidAPI-Key': 'a727428d44mshe7fa7e800825facp179890jsnb72c468a2df8'
   }
 };
 const today = new Date();
 
 async function getAirport(city) {
-  const kenttähakuteksti = document.getElementById("kenttähakuteksti").value;
   let url;
   if (city === undefined){
+    const kenttähakuteksti = document.getElementById("kenttähakuteksti").value;
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + kenttähakuteksti;
   } else{
     url = "https://aerodatabox.p.rapidapi.com/airports/search/term?q=" + city;
@@ -26,7 +26,7 @@ async function getFlight(number, callsign) {
   if (number === undefined){
     const lentohakuteksti = document.getElementById("lentohakuteksti").value;
     url = "https://aerodatabox.p.rapidapi.com/flights/number/" + lentohakuteksti + "/";
-  } else {
+  } else if (number !== undefined){
     if (callsign === 0) {
       url = "https://aerodatabox.p.rapidapi.com/flights/number/" + number + "/";
     } else {
@@ -53,8 +53,19 @@ async function getPicture(registeration){
 }
 
 async function getArrDep(){
+  let endtime;
   const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' + ((today.getHours()<10?'0':'') + today.getHours()) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
-  const endtime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' +  + (today.getHours()+1) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
+  if ((today.getHours()+1) === 24) {
+    endtime = today.getFullYear() + '-' + '0' + (today.getMonth() + 1) +
+        '-' + ((today.getDate() < 10 ? '0' : '') + (today.getDate()+1)) + 'T' +
+        + "0" + "0" + ":" +
+        ((today.getMinutes() < 10 ? '0' : '') + today.getMinutes());
+  } else if ((today.getHours()+1) !== 24) {
+    endtime = today.getFullYear() + '-' + '0' + (today.getMonth() + 1) +
+        '-' + ((today.getDate() < 10 ? '0' : '') + today.getDate()) + 'T' +
+        +(today.getHours() + 1) + ":" +
+        ((today.getMinutes() < 10 ? '0' : '') + today.getMinutes());
+  }
   const contains = await fetch('https://aerodatabox.p.rapidapi.com/flights/airports/icao/' + ICAO + '/' + starttime + '/' + endtime + '?withCodeshared=false', options)
   const result = await contains.json();
   return result;
