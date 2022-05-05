@@ -8,7 +8,7 @@ body {
 
 #signUp, #login, #logout, #loginButton, button {
     background-color: #04AA6D;
-    color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -20,7 +20,7 @@ body {
 
 #flightradarlink{
     background-color: #04AA6D;
-    color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 50px;
     border: none;
@@ -33,11 +33,23 @@ body {
 
 #loggeduser{
     background-color: #04AA6D;
-    color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     width: 168px;
+    height: 15px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+#aboutus{
+    background-color: #04AA6D;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 60px;
     height: 15px;
     border: 1px solid #ccc;
     display: inline-block;
