@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Fixed a few validations errors">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="bug fixing, finaly working login.js as should">
+      <change afterPath="$PROJECT_DIR$/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/miro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/timi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tuomas.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\Koulu\WebTekniikka\TBA-projekti" />
       <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\map" />
     </key>
   </component>
@@ -99,7 +102,7 @@
       <workItem from="1651655946682" duration="3545000" />
       <workItem from="1651723940785" duration="5492000" />
       <workItem from="1651730178701" duration="1981000" />
-      <workItem from="1651734684159" duration="1637000" />
+      <workItem from="1651734684159" duration="5883000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -170,7 +173,13 @@
       <option name="project" value="LOCAL" />
       <updated>1651673845642</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="bug fixing, finaly working login.js as should">
+      <created>1651736644483</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1651736644483</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +209,8 @@
     <MESSAGE value="Updated the getAirpalesLocation API search." />
     <MESSAGE value="Added a function, where the application prints coordinates, altitue and heading, of all departing and arriving aircrafts from specific, chosen airport." />
     <MESSAGE value="Fixed some css styling for index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some css styling for index.html" />
+    <MESSAGE value="bug fixing, finaly working login.js as should" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing, finaly working login.js as should" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
