@@ -26,6 +26,10 @@ async function getICAO(city){
     city = location.city;
   }
   airportInfo = await getAirport(city);
-  ICAO = airportInfo.items[0].icao;
-  return ICAO;
+  if (airportInfo.items.length === 0){
+    console.log("No airport found!")
+  } else {
+    ICAO = airportInfo.items[0].icao;
+    return ICAO;
+  }
 }

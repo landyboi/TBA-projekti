@@ -2,7 +2,7 @@ const options = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com',
-    'X-RapidAPI-Key': 'a727428d44mshe7fa7e800825facp179890jsnb72c468a2df8'
+    'X-RapidAPI-Key': 'b13df8318emshd4a781b663bb298p1adc90jsndd9aea88691f'
   }
 };
 const today = new Date();
@@ -40,15 +40,17 @@ async function getFlight(number, callsign) {
 
 
 async function getPicture(registeration){
-  try {
-    const contains = await fetch(
-        'https://aerodatabox.p.rapidapi.com/aircrafts/reg/' + registeration +
-        '/image/beta', options)
-    let result = await contains.json();
-    result = result.url;
-    return result;
-  } catch (error){
-    return undefined;
+  if (registeration !== undefined) {
+    try {
+      const contains = await fetch(
+          'https://aerodatabox.p.rapidapi.com/aircrafts/reg/' + registeration +
+          '/image/beta', options)
+      let result = await contains.json();
+      result = result.url;
+      return result;
+    } catch (error) {
+      console.log("No photo found!");
+    }
   }
 }
 
