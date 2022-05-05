@@ -135,7 +135,7 @@ logout.addEventListener('click', (e) =>{
        You have logged out.
       </div`
     div.innerHTML += result;
-
+    //Vaihdamme tallennetut lennot kohdan takaisin tyhjäksi seuraavaa käyttäjää varten
     const flights = document.getElementById('arrayInfo');
     flights.innerHTML = "";
     const result_flights =
