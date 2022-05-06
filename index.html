@@ -19,6 +19,7 @@
         <ul>
             <li class="flightradarlink"><a id="flightradarlink" href="map/map.html" target="_blank">Flightradar</a></li>
             <li class="aboutus"><a id="aboutus" href="about.html" target="_blank">About us</a></li>
+            <li><article id="currentAirport"></article></li>
             <li class="login" style="float: right"><button id="loginButton" onclick="document.getElementById('id01').style.display='block'">Login</button></li>
                 <div id="id01" class="modal">
                     <form class="modal-content animate" action="/action_page.php" method="post">
@@ -52,8 +53,6 @@
                     <label for="lentohakuteksti">Get flight:</label> <input id="lentohakuteksti" type="text">
                     <button onclick="printFlight()">Search! </button>
                     <button onclick="printLocation()">Search by location</button>
-                    <article id="currentAirport">
-                    </article>
                 </div>
             </div>
         </div>
