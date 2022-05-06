@@ -15,7 +15,7 @@ const firebaseConfig = {
   measurementId: "G-SHRT6YBXTN"
 };
 
-// Käynnistetään ja otetaan käyttöön firebase ja database
+// Käynnistetään ja otetaan käyttöön firebase, database ja auth käytetään käyttäjän tarkistukseen
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth(app);
@@ -53,6 +53,7 @@ login.addEventListener('click', (e) =>{
     const user = userCredential.user;
     const dt = new Date();
 
+    //vaihdamme boksissa tekstin mistä tietää oletko kirjautunut sisään
     const div = document.getElementById('loggeduser');
     div.innerHTML = "";
     const result =
@@ -75,16 +76,12 @@ login.addEventListener('click', (e) =>{
 
 const user = auth.currentUser;
 
-//Tämän avulla tiedämme kuka on kirjautuneena sisälle, tämä tieto päivittyy aina kun käyttäjän tila muuttuu logged off => logged in
+//Tämän avulla tiedämme kuka on kirjautuneena sisälle, tämä tieto päivittyy aina kun käyttäjän tila muuttuu logged off => logged in tai toistepäin
 onAuthStateChanged(auth, (user) => {
       if (user) {
         user.providerData.forEach((profile) => {
-      console.log("  Sign-in provider: " + profile.providerId);
-      console.log("  Provider-specific UID: " + profile.uid);
-      console.log("  Name: " + profile.displayName);
-      console.log("  Email: " + profile.email);
 
-      //Tallennamme ensin saamamme arrayn databaseen
+      //Tallennamme ensin käyttäjän klikatun lennon tiedot jotka ovat lähtöajankohta ja kohde
       const array =airportArray;
       update(ref(database, 'users/' + user.uid), {
         your_flights: array,
@@ -126,7 +123,7 @@ onAuthStateChanged(auth, (user) => {
 //Tämän avulla pystymme kirjautumaan ulos käyttäjästä
 logout.addEventListener('click', (e) =>{
   signOut(auth).then(() => {
-    //Vaihdamme henkilön nimen tilalle tekstin missä kerromme hänen kirjautuneen ulos
+    //Vaihdamme boksissa olevan tekstin tiedottamana että olet kirjautunut ulos
     const div = document.getElementById('loggeduser');
     div.innerHTML = "";
     const result =
@@ -149,3 +146,5 @@ logout.addEventListener('click', (e) =>{
     alert(error.message);
   });
 });
+
+//Tämän tiedoston ylläpidosta on vastannut Timi Tienhaara, joka on myös tehnyt täysin tämän tiedoston.
