@@ -1,3 +1,4 @@
+// Tiedostoa on pääsääntöisesti työstänyt Tuomas Mellin. Miro Nissinen ja Timi Tienhaara on auttanut ongelmien korjauksessa ja jotain satuunaista tehnyt tiedostoon.
 const options = {
   method: 'GET',
   headers: {

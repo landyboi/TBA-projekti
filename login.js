@@ -1,3 +1,5 @@
+//Tämän tiedoston ylläpidosta on vastannut Timi Tienhaara, joka on myös tehnyt täysin tämän tiedoston.
+
 //Importataan tarvittavat funktiot
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getDatabase, set, ref, update, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
@@ -146,5 +148,3 @@ logout.addEventListener('click', (e) =>{
     alert(error.message);
   });
 });
-
-//Tämän tiedoston ylläpidosta on vastannut Timi Tienhaara, joka on myös tehnyt täysin tämän tiedoston.

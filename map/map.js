@@ -1,4 +1,4 @@
-
+//Tiedostoa on hallinnoinut Miro Nissinen ja Tuomas Mellin
 let map = L.map('map').setView([55.22, 21.01], 4);
 let markerGroup = L.layerGroup().addTo(map);
 
