@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="made huge changes to index.css and index.html">
+    <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="tarkistin kommentit login.js tiedostosta ja poistin ylimääräiset tiedostot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,9 @@
       <workItem from="1651734684159" duration="5883000" />
       <workItem from="1651742385302" duration="308000" />
       <workItem from="1651767353639" duration="694000" />
-      <workItem from="1651851377695" duration="378000" />
+      <workItem from="1651851377695" duration="665000" />
+      <workItem from="1651857335514" duration="11000" />
+      <workItem from="1651857512448" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650528589519</created>
@@ -196,7 +198,13 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1651783286859</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="tarkistin kommentit login.js tiedostosta ja poistin ylimääräiset tiedostot">
+      <created>1651851993023</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1651851993023</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +238,8 @@
     <MESSAGE value="Fixed bugs and added a new feature, where you wil lget more information about the Delays Index value when delays text is pressed." />
     <MESSAGE value="-" />
     <MESSAGE value="made huge changes to index.css and index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="made huge changes to index.css and index.html" />
+    <MESSAGE value="tarkistin kommentit login.js tiedostosta ja poistin ylimääräiset tiedostot" />
+    <option name="LAST_COMMIT_MESSAGE" value="tarkistin kommentit login.js tiedostosta ja poistin ylimääräiset tiedostot" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
