@@ -4,6 +4,7 @@ let airportInfo = "";
 let airportName = "";
 let airportArray = [];
 
+//This function acts as the main function of the application, as it's function is to return airports from the free text search. -Tuomas
 async function searchAirportInfo(city){
   airportInfo = await getAirport(city);
   const newDiv = document.createElement("div");
@@ -21,6 +22,7 @@ async function searchAirportInfo(city){
   }
 }
 
+//This function is called when the airport selection button is clicked. It prints out the ICAO code, of the selected airport for the API. -Tuomas
 function chooseAirport(selection) {
   const div = document.getElementById("Buttons");
   div.innerHTML = "";
@@ -28,6 +30,8 @@ function chooseAirport(selection) {
   airportName = airportInfo.items[selection].name;
   printArrDep();
 }
+
+//This function prints out the next 5 departures and arrivals of the selected airport. -Tuomas
 async function printArrDep(){
   const contains = await getArrDep();
   const departures = document.getElementById('Departures');
@@ -82,6 +86,7 @@ async function printArrDep(){
   printDelays();
 }
 
+//This function prints out detailed flight information of the called flight. -Tuomas
 async function printFlight(number) {
   const contents = await getFlight(number, 0);
   console.log(contents);
@@ -137,6 +142,7 @@ async function printFlight(number) {
   }
 }
 
+//This function prints out the delays of the selected airport as an index number -Tuomas
 async function printDelays(){
   const contents = await getDelays();
   const delays = document.getElementById('Delays');
@@ -158,6 +164,7 @@ async function printDelays(){
   }
 }
 
+//This function prints out the time given as a date in a parameter of the function. Time is printed out as hours:minutes. -Tuomas
 function getTime(date){
   if (date != null) {
     let time = new Date(date)
@@ -167,6 +174,7 @@ function getTime(date){
   }
 }
 
+//This function clears the text in the text boxes. -Tuomas
 function resetText(selection){
   if (selection === 1) {
     const departures = document.getElementById('Departures');
@@ -192,6 +200,7 @@ function resetText(selection){
   }
 }
 
+//This function is called, when the delays index numbers are pressed. It prints out a text quide telling, how to interpret the index numbers. -Tuomas
 function printDelaysInfo(){
   resetText(2);
   const article = document.getElementById('Info');

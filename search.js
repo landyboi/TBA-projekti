@@ -8,6 +8,7 @@ const options = {
 };
 const today = new Date();
 
+//This function returns an array of airports that meets the requirements of the text given from the free text search. -Tuomas
 async function getAirport(city) {
   let url;
   if (city === undefined){
@@ -21,7 +22,7 @@ async function getAirport(city) {
   return result;
 }
 
-
+//This function returns an array containing a specific flight, searched by the user. -Tuomas
 async function getFlight(number, callsign) {
   let url;
   if (number === undefined){
@@ -39,7 +40,7 @@ async function getFlight(number, callsign) {
   return result;
 }
 
-
+//This function searches for the specific aircraft picture, by the registeration number which it gets as a parameter. -Tuomas
 async function getPicture(registeration){
   if (registeration !== undefined) {
     try {
@@ -55,6 +56,7 @@ async function getPicture(registeration){
   }
 }
 
+//This function returns an array containing all of the arriving and departing aircrafts from the specific airport in a timescale of this moment to and hour forwards. -Tuomas
 async function getArrDep(){
   let endtime;
   const starttime = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+((today.getDate()<10?'0':'') + today.getDate())+'T' + ((today.getHours()<10?'0':'') + today.getHours()) + ":" + ((today.getMinutes()<10?'0':'') + today.getMinutes());
@@ -74,12 +76,14 @@ async function getArrDep(){
   return result;
 }
 
+//This function returns and array containing info about the delays of the specific airport. -Tuomas
 async function getDelays(){
   const contains = await fetch('https://aerodatabox.p.rapidapi.com/airports/icao/' + ICAO + '/delays', options);
   const result = await contains.json();
   return result;
 }
 
+//This function returns the live position, direction, altitude, flight ICAO and status, either from all of the departing or arriving flights from the specific airport. -Tuomas
 async function getPositions(ICAO, direction) {
   if (direction === "Departures") {
     const contains = await fetch(

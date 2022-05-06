@@ -2,6 +2,7 @@
 let map = L.map('map').setView([55.22, 21.01], 4);
 let markerGroup = L.layerGroup().addTo(map);
 
+//This adds the map data to the map base -Miro
 L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TTlBLo55Yy2H8',{
   tileSize: 512,
   zoomOffset: -1,
@@ -9,11 +10,13 @@ L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=KCZTrF8TT
   crossOrigin: true
 }).addTo(map);
 
+//This function draws the markers to the map. -Miro
 function addToMap (lat, lon, direction, altitude, operator, flightNumber, departure, arrival, status) {
   let marker = L.marker([lat, lon]).addTo(markerGroup);
   marker.bindPopup('<strong>' + flightNumber + '</strong></br>'+ '<strong>' + "Operator: " + '</strong>' + operator + '</br>' + '<strong>' + "Direction: " + '</strong>' + direction + '</br><strong>' + "Altitude: " + '</strong>' + altitude + '</br><strong>' + "Departure: " + '</strong>' + departure + '</br><strong>' + "Arrival: " + '</strong>' + arrival + '</br><strong>' + "Status: " + '</strong>' + status);
 }
 
+//This function prints out the active flights from the API to the livemap. -Tuomas
 async function getFlightInfo(icao){
   if (icao === undefined) {
     icao = await getICAO();
@@ -62,6 +65,7 @@ async function getFlightInfo(icao){
   }
 }
 
+//This function is called, when the user searched for a city/airport from the free text search. It clears the map from the markers and then gets the new city's airports ICAO code. -Tuomas
 async function changeCity(){
   const hakuteksti = document.getElementById("hakuteksti").value;
   const icao = await getICAO(hakuteksti);
