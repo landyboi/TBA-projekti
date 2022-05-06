@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8005734-9d97-47ed-bca0-7c3e59ca6eb8" name="Changes" comment="Added some comments and added new stuff to the about.html">
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map/images/kone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\images" />
       <recent name="B:\Koulu\WebTekniikka\TBA-projekti" />
       <recent name="C:\Users\Admin\WebstormProjects\TBA-projekti\map" />
     </key>
@@ -209,7 +211,14 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1651857582898</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added some comments and added new stuff to the about.html">
+      <created>1651859210477</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651859210477</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +254,8 @@
     <MESSAGE value="made huge changes to index.css and index.html" />
     <MESSAGE value="tarkistin kommentit login.js tiedostosta ja poistin ylimääräiset tiedostot" />
     <MESSAGE value="changed &quot;plane details&quot; =&gt; &quot; flight info&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed &quot;plane details&quot; =&gt; &quot; flight info&quot;" />
+    <MESSAGE value="Added some comments and added new stuff to the about.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments and added new stuff to the about.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
